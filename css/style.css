@@ -1,0 +1,7850 @@
+body,
+html {
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+  overflow-x: hidden;
+  font-family: "Source Sans Pro", sans-serif;
+}
+@font-face {
+  font-family: "Prota Basic";
+  src: url("fonts/ProtaBasic.otf");
+}
+@font-face {
+  font-family: "Open 24";
+  src: url("fonts/Open 24 Display St.ttf");
+}
+.foodCategory h3 .lato {
+  font-family: Lato, sans-serif;
+}
+.sans {
+  font-family: "Source Sans Pro", sans-serif;
+}
+.prota {
+  font-family: "Prota Basic";
+}
+.roboto {
+  font-family: Roboto, sans-serif;
+}
+.fwLight {
+  font-weight: 300;
+}
+.fwRegular {
+  font-weight: 400;
+}
+.fwSemibold {
+  font-weight: 600;
+}
+.fwBold {
+  font-weight: 700;
+}
+.grey79 {
+  color: rgb(121, 121, 120);
+}
+a.grey79:hover {
+  color: rgb(121, 121, 120);
+}
+.grey48 {
+  color: rgb(72, 72, 72);
+}
+a.grey48:hover {
+  color: rgb(72, 72, 72);
+}
+.whiteText {
+  color: rgb(255, 255, 255);
+}
+a.whiteText:hover {
+  color: rgb(255, 255, 255);
+}
+.flex {
+  display: flex;
+}
+.hide {
+  display: none;
+}
+.header {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  padding: 0px 5%;
+  z-index: 999;
+  transition: all 0.3s ease 0s;
+}
+.header.shrink {
+  height: 80px;
+  transition: all 0.3s ease 0s;
+  background: rgb(255, 255, 255);
+}
+.mainNav {
+  justify-content: center;
+  position: relative;
+  height: 100%;
+}
+.mainNav a:hover {
+  text-decoration: none;
+  color: rgb(255, 211, 35);
+}
+.mainNav .active {
+  color: rgb(255, 211, 35);
+}
+.navCenter,
+.navLeft,
+.navRight {
+  position: relative;
+  align-self: center;
+}
+.navLeft {
+  width: 42%;
+  justify-content: space-evenly;
+}
+.navCenter {
+  width: 16%;
+  justify-content: center;
+}
+.navRight {
+  width: 42%;
+  justify-content: space-evenly;
+}
+.menuNavLink {
+  margin: 0px 5px;
+  color: rgb(44, 44, 44);
+  font-size: 12px;
+}
+.navLeft .menuNavLink {
+  margin: 0px 15px;
+}
+.menuLogo {
+  padding-top: 15px;
+  max-width: 180px;
+  transition: all 0.3s ease 0s;
+}
+.menuLogo.shrink {
+  max-width: 130px;
+  transition: all 0.3s ease 0s;
+}
+.mobileNav {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 99999;
+  top: 0px;
+  right: 0px;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  transition: all 0.5s ease 0s;
+  padding-top: 60px;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+.openNav {
+  display: none;
+  position: fixed;
+  right: 10px;
+  top: 15px;
+  color: rgb(44, 44, 44);
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 9999;
+}
+.mobileNav a {
+  padding: 5px;
+  text-decoration: none;
+  font-size: 17px;
+  color: rgb(44, 44, 44);
+  display: block;
+  transition: all 0.3s ease 0s;
+  text-align: center;
+}
+.mobileNav a:hover {
+  color: rgb(44, 44, 44);
+}
+.mobileNav a.active {
+  color: rgb(255, 211, 35);
+}
+.mobileNav .closebtn {
+  position: absolute;
+  top: 0px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.mobileLogo {
+  position: absolute;
+  top: -25px;
+  width: 60%;
+  left: 2%;
+  transition: all 0.4s ease 0s;
+  display: none;
+  align-self: flex-start;
+}
+.mobileLogo img {
+  max-width: 150px;
+  transition: all 0.4s ease 0s;
+}
+@media only screen and (min-width: 1536px) {
+  .menuNavLink {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .homeTakeAwayContainer {
+    padding: 0px 0px 0px 3%;
+  }
+}
+@media only screen and (min-width: 1900px) {
+  .menuNavLink {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .menuNavLink {
+    text-align: center;
+  }
+  .navLeft {
+    width: 42%;
+  }
+  .navCenter {
+    width: 14%;
+  }
+  .navRight {
+    width: 52%;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  .mainNav {
+    display: none;
+  }
+  .mobileNav {
+    flex-direction: column;
+  }
+  .header {
+    position: fixed;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 2px 5px 0px;
+    background: rgb(255, 255, 255);
+    z-index: 9999;
+    transition: all 0.4s ease 0s;
+  }
+  .header.shrink {
+    height: 70px;
+    transition: all 0.4s ease 0s;
+  }
+  .mobileLogo.shrink img {
+    max-width: 100px;
+    transition: all 0.4s ease 0s;
+  }
+  .mobileLogo.shrink {
+    top: -15px;
+    transition: all 0.4s ease 0s;
+  }
+  .mobileLogo,
+  .openNav {
+    display: block;
+  }
+  .menuNavLink {
+    align-self: center;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .navLeft {
+    width: 40%;
+  }
+  .navCenter {
+    width: 25%;
+  }
+  .menuLogo {
+    max-width: 150px;
+  }
+  .navRight {
+    width: 55%;
+  }
+  .modal-open .modal {
+    z-index: 10000;
+  }
+}
+.footer {
+  height: 250px;
+  padding: 1% 5% 2%;
+  position: relative;
+}
+.footerLogoBox {
+  width: 20%;
+}
+.footerContentWrapper {
+  width: 76%;
+}
+.footerLogoBox img {
+  max-width: 200px;
+}
+.footerContentWrapper {
+  flex-direction: column;
+  justify-content: space-around;
+}
+.footerNavWrapper {
+  justify-content: space-around;
+}
+.footerNavLink {
+  text-decoration: none;
+  transition: all 0.2s ease 0s;
+}
+.footerNavLink:hover {
+  text-decoration: none;
+  transition: all 0.2s ease 0s;
+  color: rgb(255, 211, 35) !important;
+}
+.footerBottom {
+  justify-content: space-around;
+}
+.copyright {
+  align-self: center;
+  position: relative;
+  right: 5%;
+}
+.socialLinks {
+  align-self: center;
+}
+.socialLinks img {
+  border: 2px solid rgb(121, 121, 120);
+  border-radius: 50%;
+  padding: 15px;
+  max-width: 55px;
+}
+.signature {
+  position: absolute;
+  bottom: 4%;
+  right: 5%;
+}
+.signature a {
+  color: rgb(44, 44, 44);
+}
+a.socialLinkBox {
+  text-decoration: none;
+}
+.footerAddress {
+  right: 13%;
+  flex-direction: column;
+}
+@media only screen and (min-width: 1920px) {
+  .copyright {
+    right: 16%;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .copyright {
+    right: 1%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .footer {
+    padding: 15px;
+  }
+  .copyright {
+    right: 1%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .footer {
+    padding: 5%;
+  }
+  .footerNavWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footerBottom {
+    flex-direction: column;
+    align-items: center;
+    padding: 5% 0px 0px;
+  }
+  .socialLinks {
+    align-self: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .footerLogoBox img {
+    max-width: 250px;
+  }
+  footercontentwrapper {
+    width: 80%;
+  }
+  .copyright {
+    right: 0%;
+  }
+  .footerAddress {
+    text-align: center;
+  }
+  .signature {
+    bottom: -23%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .footer {
+    width: 100%;
+    flex-direction: column;
+    padding: 0px;
+    height: auto;
+    align-items: center;
+  }
+  .footerLogoBox {
+    width: auto;
+  }
+  .footerNavWrapper {
+    padding-top: 10px;
+  }
+  .signature {
+    position: relative;
+    margin: 30px 0px;
+    right: 0px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .signature {
+    right: 0px;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .signature {
+    position: relative;
+    margin: 20px 0px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .footer {
+    padding: 0px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .socialLinks {
+    display: flex;
+  }
+}
+.homeTop {
+  position: relative;
+  height: 350px;
+  justify-content: center;
+  z-index: 99;
+}
+.homeTopContent {
+  align-self: flex-end;
+  text-align: center;
+  position: relative;
+  bottom: 20px;
+}
+.homeTopText {
+  font-size: 32px;
+  margin-bottom: 0px;
+}
+.homeTopLineBox {
+  font-size: 30px;
+  position: absolute;
+  bottom: 0px;
+  left: calc(50% - 1px);
+}
+.homeTopLineBox::after {
+  content: "";
+  position: absolute;
+  height: 0px;
+  width: 1px;
+  left: 50%;
+  background: rgb(80, 80, 80);
+  z-index: 20;
+  top: 38px;
+}
+.homeCloudsContainer {
+  width: 100%;
+  position: relative;
+  height: 720px;
+  z-index: 11;
+  top: 80px;
+  overflow: hidden;
+}
+.homeCloudsLeft,
+.homeCloudsRight {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 11;
+}
+.homeCloudsLeft {
+  left: 0px;
+  background: url("../img/home/home-top-cloud-1.png") center top / cover
+    no-repeat;
+  z-index: -1;
+}
+.homeCloudsRight {
+  right: 0px;
+  background: url("../img/home/home-top-cloud-2.png") center top / cover
+    no-repeat;
+  z-index: 11;
+}
+.homeCloudsLeft img,
+.homeCloudsRight img {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+}
+.homeCloudsLeft img {
+  max-width: 700px;
+  right: 40%;
+  left: 0px;
+}
+.homeCloudsRight img {
+  max-width: 400px;
+  left: 35%;
+  right: 0px;
+  z-index: -1;
+  opacity: 0.7;
+}
+.poolImgContainer {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.poolImgTxtBox {
+  position: absolute;
+  bottom: 0px;
+}
+.poolImgTxtBox {
+  left: 5%;
+}
+.poolImgTxt {
+  font-size: 18px;
+  font-weight: 300;
+}
+.poolImgTxt2 {
+  font-size: 26px;
+  display: block;
+}
+.bottleSnakeContainer {
+  position: absolute;
+  bottom: 2%;
+  height: 200px;
+  width: 300px;
+  right: 0px;
+}
+.bottleSnakeContainer img {
+  position: absolute;
+  inset: 0px;
+  margin: auto;
+}
+.homeAboutContainer {
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 150px;
+}
+.homeAboutTitleBox {
+  justify-content: center;
+}
+.homeAboutTitle {
+  align-self: flex-end;
+}
+.homeAboutTitle h1 {
+  position: relative;
+  top: 5px;
+  background: rgb(255, 199, 80);
+  padding: 15px 25px;
+  transform: rotate(4deg);
+  z-index: 1;
+  margin-bottom: 0px;
+  align-self: flex-end;
+}
+.homeAboutTitle h1 {
+  transform: rotate(-4deg);
+}
+.homeAboutTitleBox .titleNameLine {
+  left: 15%;
+  height: 450px;
+}
+.homeAboutText {
+  position: relative;
+  width: 30%;
+  left: 35%;
+  margin: 20px 0px 0px;
+}
+.homeAboutText1 {
+  font-size: 24px;
+  text-align: center;
+}
+.homeAboutText2 {
+  text-align: right;
+  font-size: 18px;
+  font-weight: 300;
+}
+.homeWolfContainer {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 120px;
+}
+.snow {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+.homeWolfContent {
+  position: absolute;
+  left: 8%;
+  bottom: 35%;
+  width: 35%;
+  z-index: 99;
+}
+.homeSnowButton {
+  position: relative;
+  z-index: 99;
+  cursor: pointer;
+}
+.homeWolfButton {
+  border: 1px solid rgb(80, 80, 80);
+  padding: 8px;
+  color: rgb(44, 44, 44);
+  cursor: pointer;
+}
+.homeWolfButton:hover {
+  color: rgb(44, 44, 44);
+  text-decoration: none;
+}
+.homeWolfContent p {
+  font-size: 32px;
+  line-height: 2;
+  margin-bottom: 30px;
+}
+.wolfCloudsLeft,
+.wolfCloudsRight {
+  position: absolute;
+  height: 300px;
+  top: -200px;
+  z-index: 10;
+}
+.homeProductsSection {
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.homeProductsLine {
+  position: relative;
+  height: 200px;
+  width: 1px;
+  background: rgb(80, 80, 80);
+  align-self: center;
+  left: 50%;
+}
+.homeProductsTitleBox {
+  align-self: center;
+  text-align: center;
+}
+.homeProductsTitleBox .sectionTitle {
+  font-size: 32px;
+  margin-bottom: 0px;
+}
+.homeCategoryBox {
+  position: relative;
+  height: 350px;
+  justify-content: center;
+  z-index: 9;
+}
+.homeFunctionalBox {
+  height: 300px;
+}
+.homeOffTheTreeBox {
+  margin-top: 60px;
+}
+.homePamperBox {
+  margin-top: 20px;
+  width: 94%;
+  left: 6%;
+}
+.homeCategoryBox .menuCategoryArrow,
+.homeCategoryBox .menuCategoryText,
+.homeCategoryBox .menuMascotBox {
+  align-self: center;
+  position: relative;
+  height: 100px;
+  color: rgb(44, 44, 44);
+  z-index: 99;
+}
+.homeCategoryBox .menuMascotBox {
+  margin-right: 20px;
+}
+.menuCategoryText p {
+  color: rgb(44, 44, 44);
+  padding-left: 10px;
+}
+p.menuCategoryTag {
+  color: rgb(33, 37, 41);
+}
+.homeCategoryBox a:hover {
+  text-decoration: none;
+}
+.homeCategoryImgBox {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.homeCategoryImgBox img {
+  position: absolute;
+}
+.smoothiesByFruitsImageBox {
+  top: 2%;
+}
+.smoothiesByFruitsImageBox img {
+  width: 100%;
+}
+.functionalImageBox img {
+  width: 100%;
+}
+.pamperImageBox img {
+  width: 100%;
+}
+.pamperImageBox {
+  top: 55%;
+}
+.hotMenuImageBox {
+  top: 70%;
+}
+.foodImageBox {
+  top: 90%;
+}
+.homeCategoryImgBox img:first-of-type {
+  left: 0px;
+}
+.homeCategoryImgBox img:last-of-type {
+  right: 0px;
+}
+.homeCategoryBox .menuCategoryTag span {
+  display: block;
+}
+.homeLocationSearch {
+  position: relative;
+  margin: 300px 0px 0px;
+}
+.homeFindMonkeyContainer {
+  position: relative;
+  background: url("../img/home/locations-banner-2.jpg") center center / cover
+    no-repeat;
+  height: 650px;
+}
+.homeLocationsImageContainer {
+  position: relative;
+}
+.homeProductsLinecontainer {
+  position: relative;
+}
+.locationMap {
+  position: absolute;
+  right: 10%;
+  top: 15%;
+  height: 70%;
+}
+.materportContianer {
+  position: relative;
+  margin: -20px 0px 30px;
+  bottom: 30px;
+}
+.homeTopText {
+  font-size: 32px;
+  margin-bottom: 0px;
+}
+.homeTopTag {
+  font-size: 18px;
+}
+.homeCloudsContainer {
+  width: 100%;
+  position: relative;
+  height: 720px;
+  z-index: 11;
+  top: 80px;
+  overflow: hidden;
+}
+.homeCloudsLeft,
+.homeCloudsRight {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 11;
+}
+.homeCloudsLeft {
+  left: 0px;
+  background: url("../img/home/cloud-alt-top.png") center top / cover no-repeat;
+  z-index: -1;
+}
+.homeCloudsRight {
+  right: 0px;
+  background: url("../img/home/cloud-alt-top-1.png") center top / cover
+    no-repeat;
+  z-index: 11;
+}
+.homeTakeAwayContainer {
+  position: relative;
+  width: 95%;
+  left: 3%;
+  margin-bottom: 11%;
+  top: -18px;
+}
+.homeTakeAwayList {
+  position: relative;
+  bottom: 35px;
+  top: 83px;
+  width: 50%;
+  left: 10%;
+  text-align: center;
+  list-style-type: none;
+  margin: 0px auto;
+}
+.homeTakeAwayList li {
+  position: relative;
+  height: 50px;
+  display: inline-block;
+  width: 22%;
+  margin-right: 2%;
+}
+.sectionContent {
+  font-size: 18px;
+}
+.menuItems {
+  cursor: pointer;
+}
+.homeProductsSection .hotMenuContainer {
+  height: 400px;
+}
+.menu-wrapper {
+  position: relative;
+  top: 1%;
+}
+.homeSmoothieBowlBoxContainer,
+.homeSmoothieByFruitsContainer,
+.homeIndulgenceBoxContainer,
+.homeFunctionalBoxContainer,
+.homeDetoxBoxContainer {
+  position: relative;
+}
+.homeSmoothieByFruitsContainer {
+  top: 5%;
+}
+.SmoothieBowlImageBox {
+  top: 0%;
+}
+.filter-drinks {
+  position: relative;
+  top: 49%;
+  width: 25%;
+}
+.globalTargetList {
+  position: relative;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.ResultNoFound,
+.resultNotFound {
+  text-align: center;
+  position: relative;
+  left: 47%;
+}
+.globalInputSearch {
+  font-family: "Prota Basic";
+  text-transform: none;
+  border-radius: 30px !important;
+}
+.IndulgenceImageBox {
+  top: 0%;
+}
+.detoxImageBox {
+  top: 0%;
+}
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: rgb(170, 170, 170);
+}
+@media only screen and (min-width: 1536px) {
+  .homeSmoothieBowlBoxContainer,
+  .homeSmoothieByFruitsContainer,
+  .homeFunctionalBoxContainer {
+    height: 600px;
+  }
+  .homeFunctionalBoxContainer {
+    top: 240px;
+  }
+  .functionalImageBox {
+    top: 2%;
+  }
+  .smoothiesByFruitsImageBox {
+    top: -73%;
+  }
+  .homeSmoothieByFruitsContainer {
+    top: 200px;
+  }
+  .homeIndulgenceBoxContainer {
+    height: 730px;
+    top: 255px;
+  }
+  .homeDetoxBoxContainer {
+    height: 400px;
+    top: 210px;
+  }
+  .IndulgenceImageBox {
+    top: 20%;
+  }
+}
+@media only screen and (min-width: 1900px) {
+  .homeSmoothieBowlBoxContainer,
+  .homeSmoothieByFruitsContainer,
+  .homeFunctionalBoxContainer {
+    height: 600px;
+  }
+  .homeFunctionalBoxContainer {
+    top: 240px;
+  }
+  .functionalImageBox {
+    top: 2%;
+  }
+  .smoothiesByFruitsImageBox {
+    top: -73%;
+  }
+  .homeSmoothieByFruitsContainer {
+    top: 200px;
+  }
+  .homeIndulgenceBoxContainer {
+    height: 600px;
+    top: 255px;
+  }
+  .homeDetoxBoxContainer {
+    height: 400px;
+    top: 210px;
+  }
+}
+@media only screen and (min-width: 2160px) {
+  .homeSmoothieBowlBoxContainer,
+  .homeSmoothieByFruitsContainer,
+  .homeFunctionalBoxContainer {
+    height: 600px;
+  }
+  .homeFunctionalBoxContainer {
+    top: 240px;
+  }
+  .functionalImageBox {
+    top: 2%;
+  }
+  .smoothiesByFruitsImageBox {
+    top: -73%;
+  }
+  .homeSmoothieByFruitsContainer {
+    top: 200px;
+  }
+  .homeIndulgenceBoxContainer {
+    height: 600px;
+    top: 255px;
+  }
+  .homeDetoxBoxContainer {
+    height: 400px;
+    top: 210px;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .homeSmoothieBowlBoxContainer,
+  .homeSmoothieByFruitsContainer,
+  .homeFunctionalBoxContainer {
+    height: 800px;
+  }
+  .homeFunctionalBoxContainer {
+    top: 200px;
+  }
+  .functionalImageBox {
+    top: 2%;
+  }
+  .smoothiesByFruitsImageBox {
+    top: -73%;
+  }
+  .homeSmoothieByFruitsContainer {
+    top: 200px;
+  }
+  .homeIndulgenceBoxContainer,
+  .homeDetoxBoxContainer {
+    height: 500px;
+    top: 290px;
+  }
+}
+@media only screen and (max-width: 1535px) {
+  .homeSmoothieBowlBoxContainer,
+  .homeSmoothieByFruitsContainer,
+  .homeFunctionalBoxContainer {
+    height: 400px;
+  }
+  .homeFunctionalBoxContainer {
+    top: 240px;
+  }
+  .functionalImageBox {
+    top: 2%;
+  }
+  .smoothiesByFruitsImageBox {
+    top: -73%;
+  }
+  .homeSmoothieByFruitsContainer {
+    top: 200px;
+  }
+  .homeIndulgenceBoxContainer {
+    height: 600px;
+    top: 255px;
+  }
+  .homeDetoxBoxContainer {
+    height: 400px;
+    top: 210px;
+  }
+  .detoxImageBox {
+    top: 30%;
+  }
+  .SmoothieBowlImageBox {
+    top: 25%;
+    right: 3%;
+  }
+  .IndulgenceImageBox {
+    top: 20%;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .homeSmoothieBowlBoxContainer,
+  .homeSmoothieByFruitsContainer,
+  .homeFunctionalBoxContainer {
+    height: 400px;
+  }
+  .homeFunctionalBoxContainer {
+    top: 240px;
+  }
+  .functionalImageBox {
+    top: 2%;
+  }
+  .smoothiesByFruitsImageBox {
+    top: -73%;
+  }
+  .homeSmoothieByFruitsContainer {
+    top: 200px;
+  }
+  .homeIndulgenceBoxContainer {
+    height: 600px;
+    top: 255px;
+  }
+  .homeDetoxBoxContainer {
+    height: 400px;
+    top: 210px;
+  }
+  .detoxImageBox {
+    top: 30%;
+  }
+  .SmoothieBowlImageBox {
+    top: 25%;
+    right: 3%;
+  }
+  .IndulgenceImageBox {
+    top: 20%;
+  }
+}
+@media only screen and (max-width: 1370px) {
+  .homeSmoothieBowlBoxContainer,
+  .homeSmoothieByFruitsContainer,
+  .homeFunctionalBoxContainer {
+    height: 400px;
+  }
+  .homeFunctionalBoxContainer {
+    top: 240px;
+  }
+  .functionalImageBox {
+    top: 2%;
+  }
+  .smoothiesByFruitsImageBox {
+    top: -62%;
+  }
+  .homeSmoothieByFruitsContainer {
+    top: 200px;
+  }
+  .homeIndulgenceBoxContainer {
+    height: 484px;
+    top: 255px;
+  }
+  .homeDetoxBoxContainer {
+    height: 320px;
+    top: 210px;
+  }
+  .detoxImageBox {
+    top: 53%;
+  }
+  .SmoothieBowlImageBox {
+    top: 25%;
+    right: 3%;
+  }
+  .IndulgenceImageBox {
+    top: 20%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .homeSmoothieBowlBoxContainer,
+  .homeSmoothieByFruitsContainer,
+  .homeFunctionalBoxContainer {
+    height: 400px;
+  }
+  .homeFunctionalBoxContainer {
+    top: 240px;
+  }
+  .homeFunctionalBox {
+    top: 71px;
+  }
+  .functionalImageBox {
+    top: 27%;
+  }
+  .smoothiesByFruitsImageBox {
+    top: -60%;
+  }
+  .homeSmoothiesByFruits {
+    top: 154px;
+  }
+  .homeSmoothieByFruitsContainer {
+    top: 200px;
+  }
+  .homeIndulgenceBoxContainer {
+    height: 484px;
+    top: 255px;
+  }
+  .homeDetoxBoxContainer {
+    height: 320px;
+    top: 210px;
+  }
+  .detoxImageBox {
+    top: 53%;
+  }
+  .SmoothieBowlImageBox {
+    top: 38%;
+  }
+  .SmoothieBowlImageBox .img:last-child {
+    right: 3%;
+  }
+  .IndulgenceImageBox {
+    top: 20%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .homeSmoothieBowlBoxContainer,
+  .homeSmoothieByFruitsContainer,
+  .homeFunctionalBoxContainer {
+    height: 300px;
+  }
+  .homeFunctionalBox {
+    top: 71px;
+  }
+  .functionalImageBox {
+    top: 27%;
+  }
+  .smoothiesByFruitsImageBox {
+    top: -60%;
+  }
+  .homeSmoothiesByFruits {
+    top: -10px;
+  }
+  .homeFunctionalBoxContainer {
+    top: 62px;
+  }
+  .homeIndulgenceBoxContainer {
+    height: 200px;
+    top: 155px;
+  }
+  .homeDetoxBoxContainer {
+    height: 300px;
+    top: 63px;
+  }
+  .detoxImageBox {
+    top: 53%;
+  }
+  .SmoothieBowlImageBox {
+    top: 38%;
+    right: 5%;
+  }
+  .IndulgenceImageBox {
+    top: 33%;
+  }
+  .filter-drinks {
+    position: relative;
+    top: 35%;
+    right: 6%;
+    width: 25%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .homeSmoothieBowlBoxContainer,
+  .homeSmoothieByFruitsContainer,
+  .homeFunctionalBoxContainer {
+    height: 300px;
+  }
+  .homeFunctionalBox {
+    top: 71px;
+  }
+  .functionalImageBox {
+    top: 27%;
+  }
+  .smoothiesByFruitsImageBox {
+    top: -60%;
+  }
+  .homeSmoothiesByFruits {
+    top: -10px;
+  }
+  .homeFunctionalBoxContainer {
+    top: 62px;
+  }
+  .homeIndulgenceBoxContainer {
+    height: 200px;
+    top: 155px;
+  }
+  .homeDetoxBoxContainer {
+    height: 169px;
+    top: 63px;
+  }
+  .detoxImageBox {
+    top: 47%;
+  }
+  .SmoothieBowlImageBox {
+    top: 38%;
+    right: 5%;
+  }
+  .IndulgenceImageBox {
+    top: 33%;
+  }
+  .filter-drinks {
+    position: relative;
+    top: 35%;
+    right: 6%;
+    width: 25%;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .homeSmoothieBowlBoxContainer,
+  .homeSmoothieByFruitsContainer,
+  .homeFunctionalBoxContainer {
+    height: 150px;
+    top: 0px;
+  }
+  .homeFunctionalBox {
+    top: 1px;
+  }
+  .functionalImageBox {
+    top: 27%;
+  }
+  .smoothiesByFruitsImageBox {
+    top: -41px;
+  }
+  .homeSmoothiesByFruits {
+    top: 0px;
+  }
+  .homeFunctionalBoxContainer {
+    top: 2px;
+  }
+  .homeIndulgenceBoxContainer {
+    height: 100px;
+    top: 155px;
+  }
+  .homeDetoxBoxContainer {
+    height: 100px;
+    top: 63px;
+  }
+  .detoxImageBox {
+    top: 9%;
+  }
+  .SmoothieBowlImageBox {
+    top: 0%;
+    right: 19%;
+  }
+  .IndulgenceImageBox {
+    top: -42%;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .homeSmoothieBowlBoxContainer,
+  .homeSmoothieByFruitsContainer,
+  .homeFunctionalBoxContainer {
+    height: 150px;
+    top: 0px;
+  }
+  .homeSmoothieByFruitsContainer {
+    top: 25px;
+  }
+  .homeFunctionalBoxContainer {
+    top: 25px;
+  }
+  .homeFunctionalBox {
+    top: 1px;
+  }
+  .functionalImageBox {
+    top: 32%;
+  }
+  .smoothiesByFruitsImageBox {
+    top: -41px;
+  }
+  .homeSmoothiesByFruits {
+    top: 0px;
+  }
+  .homeFunctionalBoxContainer {
+    top: 2px;
+  }
+  .homeIndulgenceBoxContainer {
+    height: 100px;
+    top: 78px;
+  }
+  .homeDetoxBoxContainer {
+    height: 100px;
+    top: 23px;
+  }
+  .detoxImageBox {
+    top: 0%;
+  }
+  .SmoothieBowlImageBox {
+    top: 0%;
+    right: 19%;
+  }
+  .IndulgenceImageBox {
+    top: 0px;
+  }
+  .homeTakeAwayContainer {
+    position: relative;
+    width: 95%;
+    left: 3%;
+    margin-bottom: 5%;
+    top: -54px;
+  }
+  .foodCategory {
+    flex-direction: column;
+  }
+  .filter-drinks {
+    left: 0%;
+    top: 10%;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1536px) {
+  .homeFindMonkeyContainer {
+    height: 655px;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .homeAboutTitle h1 {
+    left: 13%;
+  }
+  .homeTopLineBox::after {
+    height: 1200px;
+  }
+  .homePamperBox {
+    left: 2%;
+  }
+  .homeFindMonkeyContainer {
+    height: 88.5vh;
+  }
+  .homeAboutTitleBox .titleNameLine {
+    left: 14.5%;
+  }
+  .homeLocationSearch {
+    margin: 20% 0px 0px;
+  }
+}
+@media only screen and (min-width: 2160px) {
+  .homeTop {
+    height: 300px;
+  }
+  .homeTopLineBox::after {
+    height: 1250px;
+  }
+  .homeFindMonkeyContainer {
+    height: 89.5vh;
+  }
+  .homeAboutTitleBox .titleNameLine {
+    left: 10.5%;
+  }
+  .homeAboutTitle h1 {
+    left: 1%;
+  }
+  .homeAboutContainer {
+    margin-bottom: 100px;
+  }
+  .homeLocationSearch {
+    margin: 20% 0px 0px;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .homeTopLineBox::after {
+    height: 1350px;
+  }
+  .homeAboutTitleBox .titleNameLine {
+    left: 9%;
+  }
+  .homeFindMonkeyContainer {
+    height: 87.3vh;
+  }
+  .homeLocationSearch {
+    margin: 25% 0px 0px;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .homeWolfContent {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .homeOffTheTreeBox {
+    right: 3%;
+  }
+  .homeAboutTitleBox .titleNameLine {
+    left: 20%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .homeTopLineBox::after {
+    height: 970px;
+  }
+  .titleName {
+    right: 2%;
+  }
+  .homeAboutText2 {
+    text-align: center;
+  }
+  .homeCategoryBox {
+    height: 250px;
+  }
+  .homeOffTheTreeBox {
+    margin: 0px;
+  }
+  .homeCategoryImgBox img:last-of-type {
+    right: -7%;
+  }
+  .homeCategoryImgBox img:first-of-type {
+    left: -1%;
+  }
+  .homeFindMonkeyContainer {
+    margin: 150px 0px 0px;
+  }
+  .locationMap {
+    top: 20%;
+  }
+  .homeWolfContent {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .homeTop {
+    height: 250px;
+  }
+  .homeTopLineBox::after {
+    height: 820px;
+  }
+  .homeCloudsContainer {
+    height: 600px;
+  }
+  .homeAboutTitleBox .titleNameLine {
+    left: 24%;
+  }
+  .titleName {
+    right: 0px;
+  }
+  .homeCategoryImgBox img:first-of-type {
+    left: -3%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .homeTop {
+    height: 180px;
+    margin-top: 40px;
+  }
+  .homeCloudsContainer {
+    height: 450px;
+  }
+  .homeTopLineBox::after {
+    height: 640px;
+  }
+  .homeAboutTitleBox .titleNameLine {
+    left: 27%;
+    height: 300px;
+  }
+  .homeAboutText {
+    width: 95%;
+    left: 25px;
+  }
+  .homeCategoryImgBox img:last-of-type {
+    right: -9%;
+  }
+  .homeCategoryImgBox img:first-of-type {
+    left: -6%;
+  }
+  .homeCategoryBox {
+    height: 165px;
+  }
+  .homeFindMonkeyContainer {
+    margin: 110px 0px 0px;
+  }
+  .locationMap {
+    top: 23%;
+  }
+}
+@media only screen and (max-width: 651px) {
+  .homeTop {
+    height: 150px;
+    margin-top: 80px;
+  }
+  .homeTopLineBox::after {
+    height: 559px;
+  }
+  .homeCloudsContainer {
+    height: 400px;
+  }
+  .homeAboutContainer {
+    margin-top: 80px;
+  }
+  .homeAboutTitleBox .titleNameLine {
+    left: 30%;
+  }
+  .homeAboutTitle h1 {
+    font-size: 30px;
+  }
+  .homeAboutText {
+    width: 90%;
+    left: 5%;
+  }
+  .poolImgTxtBox {
+    position: relative;
+  }
+  .homeWolfContent p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .snow {
+    display: none;
+  }
+  .homeProductsTitleBox .sectionTitle {
+    font-size: 24px;
+  }
+  .homeCategoryImgBox {
+    width: 85%;
+  }
+  .homeCategoryBox {
+    height: 135px;
+    left: 27%;
+    width: 40%;
+  }
+  .homeCategoryImgBox img:last-of-type {
+    right: -20%;
+  }
+  .homeCategoryBox .menuCategory {
+    font-size: 16px;
+  }
+  .homeCategoryBox .menuCategoryTag {
+    font-size: 12px;
+  }
+  .homeLocationSearch {
+    margin-top: 100px;
+  }
+  .homeFindMonkeyContainer {
+    margin-top: 30px;
+    height: 300px;
+  }
+  .totalStoreCountBox {
+    bottom: 10%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .homeTop {
+    height: 100px;
+    margin-top: 150px;
+  }
+  .homeTopLineBox::after {
+    height: 523px;
+  }
+  .homeAboutContainer {
+    margin-bottom: 40px;
+  }
+  .homeAboutTitleBox .titleNameLine {
+    left: 39%;
+  }
+  .homeAboutTitle h1 {
+    font-size: 25px;
+  }
+  .homeProductsLine {
+    height: 100px;
+  }
+  .homeWolfContainer {
+    margin-bottom: 60px;
+  }
+  .homeCategoryBox {
+    height: 110px;
+    left: 30%;
+    width: 41%;
+  }
+  .homeProductsTitleBox {
+    padding-bottom: 10px;
+  }
+  .homeCategoryImgBox img:first-of-type {
+    left: -4%;
+  }
+  .homeFindMonkeyContainer {
+    margin: 70px 0px 0px;
+  }
+  .locationMap {
+    top: 30%;
+    right: 9%;
+    height: 60%;
+  }
+  .homeTakeAwayList {
+    flex-direction: column;
+    width: 100%;
+    left: 17%;
+  }
+  .homeTakeAwayList li {
+    width: 52%;
+    height: 100px;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .homeAboutTitleBox .titleNameLine {
+    left: 36%;
+  }
+  .homeTopLineBox::after {
+    height: 503px;
+  }
+  .homeAboutText {
+    width: 90%;
+    left: 5%;
+  }
+  .homeCategoryImgBox img:last-of-type {
+    right: -27%;
+  }
+  .homeCategoryBox {
+    height: 100px;
+    left: 26%;
+    width: 48%;
+    margin-bottom: 5%;
+  }
+  .homeCategoryBox .menuMascotBox {
+    margin-right: 5px;
+  }
+  .homeFindMonkeyContainer {
+    margin: 50px 0px 0px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .homeTopLineBox::after {
+    height: 342px;
+  }
+  .homeCloudsContainer {
+    height: 250px;
+  }
+  .homeAboutTitle h1 {
+    padding: 10px;
+  }
+  .titleName {
+    right: -12px;
+  }
+  .homeAboutTitleBox .titleNameLine {
+    left: 37%;
+    height: 210px;
+  }
+  .homeCategoryBox {
+    height: 115px;
+    left: 31%;
+    width: 45%;
+  }
+  .homeProductsLine {
+    height: 75px;
+  }
+  .homeTakeAwayList {
+    left: 14%;
+  }
+  .homeTakeAwayList li {
+    width: 58%;
+  }
+}
+@media only screen and (max-width: 321px) {
+  .homeAboutTitle h1 {
+    font-size: 20px;
+  }
+  .homeTakeAwayList {
+    left: 7%;
+  }
+  hometakeawaylist li {
+    width: 70%;
+  }
+}
+.aboutTopBanner {
+  position: relative;
+  height: 550px;
+  background: url("../img/about/about-banner.jpg") center top / cover no-repeat;
+  margin-top: 100px;
+}
+.aboutBannerContentBox {
+  position: relative;
+  width: 90%;
+  left: 10%;
+  top: 15%;
+}
+.aboutBannerTitle {
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.aboutBannerTitle p {
+  margin-bottom: 0px;
+}
+.aboutBannerLink {
+  color: rgb(44, 44, 44);
+  border: 1px solid rgb(44, 44, 44);
+  padding: 8px;
+  cursor: pointer;
+}
+.aboutBannerLink:hover {
+  color: rgb(44, 44, 44);
+  text-decoration: none;
+}
+.whatIsDmContainer {
+  position: relative;
+  margin: 0px 0px 100px;
+}
+.titleNameBox {
+  position: relative;
+  justify-content: center;
+  margin-bottom: 25px;
+  z-index: -1;
+}
+.titleName {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.titleNameLine {
+  position: relative;
+  height: 250px;
+  width: 1px;
+  background: rgb(80, 80, 80);
+  left: 18%;
+  z-index: 0;
+}
+.aboutProductsTitleBox .titleNameLine {
+  left: 11.5%;
+}
+.commandosContainerTitleBox .titleNameLine {
+  left: 18%;
+}
+.titleName p {
+  position: relative;
+  top: 5px;
+  background: rgb(255, 199, 80);
+  padding: 15px 25px;
+  transform: rotate(-4deg);
+  z-index: 1;
+  margin-bottom: 0px;
+  align-self: flex-end;
+  font-size: 30px;
+}
+.aboutProductsTitle p,
+.commandosContainerTitle p {
+  transform: rotate(4deg);
+}
+.whatIsDmContent {
+  padding: 0px 28%;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 50px;
+}
+.aboutSliderContainer {
+  position: relative;
+  height: 450px;
+}
+.aboutSliderContainer .carousel-indicators li {
+  cursor: pointer;
+}
+#aboutSlider,
+.carousel-inner,
+.carousel-item,
+.carouselBox {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+#aboutSlide1 {
+  background: url("../img/about/about-slider-1.jpg") center bottom / cover
+    no-repeat;
+}
+#aboutSlide2 {
+  background: url("../img/about/about-slider-2.jpg") center bottom / cover
+    no-repeat;
+}
+#aboutSlide3 {
+  background: url("../img/about/about-slider-3.jpg") center bottom / cover
+    no-repeat;
+}
+#aboutSlide4 {
+  background: url("../img/about/about-slider-4.jpg") center bottom / cover
+    no-repeat;
+}
+#aboutSlide5 {
+  background: url("../img/about/about-slider-5.jpg") center bottom / cover
+    no-repeat;
+}
+#aboutSlide6 {
+  background: url("../img/about/about-slider-6.jpg") center bottom / cover
+    no-repeat;
+}
+#aboutSlide7 {
+  background: url("../img/about/about-slider-7.jpg") center bottom / cover
+    no-repeat;
+}
+#aboutSlide8 {
+  background: url("../img/about/about-slider-8.jpg") center top / cover
+    no-repeat;
+}
+.carouselBox {
+  justify-content: center;
+}
+.carousel-item p {
+  position: relative;
+  width: 33%;
+  align-self: center;
+  text-align: center;
+  font-size: 16px;
+}
+.carousel-indicators li {
+  background-color: rgb(183, 183, 183);
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+}
+.carousel-indicators li.active {
+  border: 1px solid rgb(80, 80, 80);
+}
+.aboutProductsContainer {
+  position: relative;
+  height: auto;
+  margin: 100px 0px 50px;
+}
+.aboutProductsContentBox {
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 99;
+}
+.aboutProductsContent {
+  width: 35%;
+  margin-top: 50px;
+  align-self: center;
+  text-align: center;
+  font-size: 16px;
+}
+.aboutProductsContent ol li {
+  padding-left: 10px;
+}
+.aboutProductsLeft,
+.aboutProductsRight {
+  position: absolute;
+  width: 45%;
+  height: 100%;
+}
+.aboutProductsLeft {
+  top: 10%;
+}
+.aboutProductsRight {
+  top: 5%;
+}
+.aboutProductsLeft img:last-of-type {
+  top: 10%;
+  right: 25%;
+}
+.aboutProductsLeft img,
+.aboutProductsRight img {
+  position: absolute;
+}
+.aboutProductsLeft {
+  left: 0px;
+}
+.aboutProductsRight,
+.aboutProductsRight img {
+  right: 0px;
+}
+.commandosContainer {
+  position: relative;
+  margin: 100px 0px 50px;
+}
+.commandosContainerTitleBox {
+  position: relative;
+}
+.commondosList {
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  left: 10%;
+  margin: 100px 0px 0px;
+}
+.commondosBox {
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.commondosName {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.commondosImgBox {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 1px solid rgb(149, 149, 149);
+  justify-content: center;
+  overflow: hidden;
+}
+.commondosImgBox img {
+  align-self: flex-start;
+}
+.commondosContent {
+  align-self: center;
+  position: relative;
+  width: calc(100% - 300px);
+  font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.carouselBox p span {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Source Sans Pro", sans-serif;
+}
+@media only screen and (min-width: 1600px) {
+  .aboutTopBanner {
+    height: 700px;
+  }
+  .aboutSliderContainer {
+    height: 600px;
+  }
+  .commandosContainerTitleBox .titleNameLine,
+  .titleNameLine {
+    left: 14%;
+  }
+  .aboutProductsContent,
+  .carousel-item p,
+  .commondosContent,
+  .whatIsDmContent {
+    font-size: 18px;
+  }
+  .aboutProductsTitleBox .titleNameLine {
+    left: 8.5%;
+  }
+}
+@media only screen and (min-width: 2300px) {
+  .aboutTopBanner {
+    height: 900px;
+  }
+  .aboutSliderContainer {
+    height: 750px;
+  }
+  .commandosContainerTitleBox .titleNameLine,
+  .titleNameLine {
+    left: 10%;
+  }
+  .titleNameLine {
+    height: 450px;
+  }
+  .whatIsDmContainer {
+    margin-bottom: 200px;
+  }
+  .aboutProductsContent,
+  .carousel-item p,
+  .commondosContent,
+  .whatIsDmContent {
+    font-size: 25px;
+  }
+  .aboutProductsContainer {
+    margin-bottom: 170px;
+  }
+  .aboutProductsContent {
+    width: 40%;
+  }
+  .aboutProductsTitleBox .titleNameLine {
+    left: 6%;
+    height: 350px;
+  }
+  .aboutProductsLeft img:last-of-type {
+    right: 47%;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .titleNameLine {
+    left: 20%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .titleName p {
+    padding: 10px 5px;
+  }
+  .aboutProductsLeft,
+  .aboutProductsRight {
+    width: 42%;
+  }
+  .aboutProductsLeft {
+    left: -70px;
+    top: -5%;
+  }
+  .aboutProductsContent {
+    width: 40%;
+  }
+  .aboutTopBanner {
+    margin-top: 100px;
+  }
+  .aboutProductsContainer {
+    margin-bottom: 0px;
+  }
+  .aboutProductsTitleBox .titleNameLine {
+    height: 150px;
+  }
+  .aboutProductsLeft {
+    top: 0px;
+  }
+  .commandosContainer {
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .titleName p {
+    right: 0px;
+  }
+  .commandosContainer {
+    margin-top: 60px;
+  }
+  .titleNameLine {
+    left: 25%;
+  }
+  .commandosContainerTitleBox .titleNameLine {
+    left: 25%;
+  }
+  .aboutProductsTitleBox .titleNameLine {
+    left: 15.5%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .whatIsDmContent {
+    padding: 0px 10%;
+  }
+  .aboutProductsTitleBox .titleNameLine,
+  .commandosContainerTitleBox .titleNameLine,
+  .titleNameLine {
+    align-self: center;
+  }
+  .titleName p {
+    padding: 15px 10px;
+    font-size: 25px;
+  }
+  .aboutProductsLeft {
+    left: -50px;
+    top: -2%;
+  }
+  .aboutProductsRight,
+  .aboutProductsRight img {
+    top: 25%;
+  }
+  .commondosBox {
+    flex-direction: column;
+  }
+  .commondosImgBox {
+    align-self: center;
+  }
+  .commondosContent {
+    width: 100%;
+  }
+  .commondosName {
+    text-align: center;
+    padding: 20px 0px 0px;
+  }
+  .aboutProductsContent {
+    width: 47%;
+    position: relative;
+    right: 4%;
+  }
+}
+@media only screen and (max-width: 651px) {
+  .titleNameLine {
+    left: 35%;
+  }
+  .aboutProductsRight,
+  .aboutProductsRight img {
+    top: -1%;
+    right: -1%;
+  }
+  .aboutProductsLeft {
+    left: -55px;
+    top: -10%;
+  }
+  .aboutProductsContent {
+    width: 60%;
+    margin: 25px 0px 0px;
+  }
+  .aboutProductsContainer {
+    height: 100%;
+  }
+  .carousel-item p {
+    width: 80%;
+  }
+  .aboutProductsTitleBox .titleNameLine {
+    left: 23.5%;
+  }
+  .commandosContainerTitleBox .titleNameLine {
+    left: 39%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .titleNameLine {
+    left: 40%;
+  }
+  .aboutSliderContainer {
+    height: 400px;
+  }
+  .aboutProductsRight,
+  .aboutProductsRight img {
+    top: -2%;
+  }
+  .titleName p {
+    right: 0px;
+  }
+  .aboutProductsContent {
+    width: 70%;
+    margin: 18px 0px 0px;
+    right: 0px;
+  }
+  .commandosContainer {
+    margin: 0px 0px 30px;
+  }
+  .titleName {
+    right: 1%;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .titleNameLine {
+    left: 40%;
+  }
+  .titleName p {
+    font-size: 20px;
+  }
+  .aboutProductsTitleBox .titleNameLine {
+    left: 23.5%;
+  }
+  .commandosContainerTitleBox .titleNameLine {
+    left: 39%;
+  }
+  .aboutProductsContent {
+    width: 90%;
+    margin: 15% 0px 0px;
+    right: 0px;
+  }
+  .aboutProductsLeft {
+    left: 0px;
+    top: -10%;
+  }
+  .aboutProductsRight,
+  .aboutProductsRight img {
+    top: 0px;
+  }
+  .titleName p {
+    right: 8px;
+  }
+  .carousel-item p {
+    width: 90%;
+  }
+  .aboutSliderContainer {
+    height: 350px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .whatIsDmContent {
+    padding: 0px 4%;
+  }
+  .titleName p {
+    font-size: 17px;
+  }
+  .titleNameLine {
+    left: 45%;
+  }
+  .aboutProductsTitleBox .titleNameLine {
+    left: 25.5%;
+  }
+  .commandosContainerTitleBox .titleNameLine {
+    left: 42%;
+  }
+  .titleName p {
+    right: 0px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .titleNameLine {
+    left: 47%;
+  }
+  .aboutProductsTitleBox .titleNameLine {
+    left: 30%;
+  }
+  .commandosContainerTitleBox .titleNameLine {
+    left: 47%;
+  }
+}
+.menuBanner {
+  position: relative;
+  height: 700px;
+  background: url("../img/menu/menu-banner.jpg") center bottom / cover no-repeat;
+  padding: 0px 8%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6%;
+}
+.menuBannerContent {
+  align-self: center;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+.menuBannerContent p {
+  font-size: 32px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.menuBannerContent a {
+  color: rgb(44, 44, 44);
+}
+.ball,
+.dumbell,
+.umbrellaLeft,
+.umbrellaRight {
+  position: absolute;
+}
+.umbrellaLeft {
+  left: 0px;
+  top: 0px;
+}
+.umbrellaRight {
+  right: 0px;
+  top: 0px;
+}
+.ball {
+  right: 0px;
+  bottom: 0px;
+}
+.dumbell {
+  left: 0px;
+  bottom: 0px;
+}
+.menuMain {
+  position: relative;
+  overflow: hidden;
+}
+.menuLine {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+.offTheTreeContainer {
+  height: 400px;
+  margin-top: 40px;
+}
+.functionalContainer {
+  height: 540px;
+}
+.smoothie-bowl-container {
+  margin-top: 30px;
+}
+.pamperContainer {
+  height: 400px;
+}
+.hotMenuContainer {
+  height: 600px;
+}
+.foodContainer {
+  height: 650px;
+  margin-bottom: 80px;
+}
+.menuCategoryImgBox {
+  width: 65%;
+  align-self: flex-start;
+}
+.functionalContainer,
+.hotMenuContainer {
+  justify-content: flex-end;
+}
+.menuCategoryContent {
+  width: 50%;
+  align-self: flex-end;
+}
+.menuCategoryContent:hover {
+  text-decoration: none;
+}
+.functionalContainer .menuCategoryContent,
+.hotMenuContainer .menuCategoryContent {
+  justify-content: flex-end;
+}
+.pamperContainer .menuCategoryContent {
+  position: relative;
+  bottom: 50px;
+}
+.foodContainer .menuCategoryContent {
+  align-self: center;
+  position: relative;
+  top: 50px;
+}
+.menuCategory {
+  font-size: 32px;
+  margin-bottom: 0px;
+}
+.menuCategoryTag {
+  font-size: 16px;
+}
+.hotMenuContainer .menuMascotBox img {
+  position: relative;
+  left: 55px;
+  bottom: 15px;
+}
+.foodContainer .menuMascotBox {
+  position: relative;
+  right: 20px;
+  bottom: 30px;
+}
+.foodContainer .menuCategoryText {
+  position: relative;
+  right: 70px;
+}
+@media only screen and (min-width: 1920px) {
+  .menuCategoryImgBox {
+    width: 54%;
+  }
+  .homeTakeAwayContainer {
+    margin-top: 8%;
+  }
+}
+@media only screen and (min-width: 2160px) {
+  .menuCategoryImgBox {
+    width: 46%;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .menuCategoryImgBox {
+    width: 39%;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .functionalContainer {
+    height: 400px;
+  }
+  .hotMenuContainer {
+    height: 424px;
+  }
+  .foodContainer {
+    margin-bottom: 0px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .menuBanner {
+    margin-top: 80px;
+  }
+  .hotMenuContainer,
+  .offTheTreeContainer {
+    height: 500px;
+  }
+  .functionalContainer {
+    height: 350px;
+  }
+  .pamperContainer {
+    height: 400px;
+  }
+  .foodContainer {
+    height: 550px;
+    margin: 0px;
+  }
+  .menuBanner img {
+    max-width: 80%;
+  }
+  .ball,
+  .umbrellaRight {
+    text-align: right;
+  }
+  .umbrellaLeft,
+  .umbrellaRight {
+    top: 5%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .hotMenuContainer {
+    height: 250px;
+  }
+  .functionalContainer {
+    height: 300px;
+  }
+  .functionalContainer .menuCategoryContent {
+    position: relative;
+    bottom: 40px;
+  }
+  .foodContainer {
+    height: 450px;
+  }
+  .menuCategory {
+    font-size: 23px;
+  }
+  .menuCategoryTag {
+    font-size: 16px;
+  }
+  .copyright {
+    right: 0px;
+    text-align: center;
+    bottom: 10px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .menuBanner .img-fluid {
+    max-width: 45%;
+  }
+  .umbrellaRight {
+    text-align: right;
+  }
+  .menuBanner {
+    height: 350px;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+  }
+  .menuCategoryContent {
+    width: 58%;
+  }
+  .offTheTreeContainer {
+    height: 250px;
+  }
+  .hotMenuContainer {
+    height: 200px;
+  }
+  .functionalContainer {
+    height: 300px;
+  }
+  .functionalContainer .menuCategoryContent {
+    position: relative;
+    bottom: 40px;
+    left: 80px;
+  }
+  .pamperContainer {
+    height: 300px;
+  }
+  .foodContainer {
+    height: 400px;
+  }
+  .menuCategory {
+    font-size: 23px;
+  }
+  .foodContainer .menuCategoryText {
+    right: 50px;
+  }
+  .umbrellaLeft {
+    left: -5%;
+  }
+  .menuBannerContent {
+    bottom: 0px;
+    left: 0px;
+  }
+  .menuBannerContent p {
+    font-size: 24px;
+  }
+  .umbrellaLeft,
+  .umbrellaRight {
+    top: 4%;
+  }
+  .dumbell {
+    bottom: -4%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .menuCategoryContent {
+    width: 100%;
+    align-self: center;
+  }
+  .foodContainer,
+  .offTheTreeContainer,
+  .pamperContainer {
+    height: 200px;
+  }
+  .functionalContainer,
+  .hotMenuContainer {
+    justify-content: space-between;
+    height: 200px;
+  }
+  .functionalContainer .menuCategoryContent {
+    left: 0px;
+    bottom: 0px;
+  }
+  .pamperContainer .menuCategoryContent {
+    align-self: flex-end;
+  }
+  .hotMenuContainer .menuMascotBox img {
+    left: 20px;
+  }
+  .foodContainer {
+    margin-bottom: 70px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .menuCategoryContainer {
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+  }
+  .menuBannerContent {
+    margin-top: 40%;
+  }
+  .menuCategoryContainer {
+    margin-bottom: 40px;
+  }
+  .functionalContainer .menuCategoryContent,
+  .menuCategoryContent {
+    justify-content: center;
+  }
+  .functionalContainer,
+  .hotMenuContainer {
+    flex-direction: column-reverse;
+  }
+  .functionalContainer .menuCategoryImgBox,
+  .hotMenuContainer .menuCategoryImgBox {
+    align-self: flex-end;
+  }
+  .pamperContainer .menuCategoryContent {
+    bottom: 0px;
+  }
+  .foodContainer .menuCategoryContent {
+    top: 0px;
+  }
+  .menuCategoryArrow {
+    display: none;
+  }
+  .menuBanner {
+    margin-top: 20px;
+  }
+  .dumbell {
+    top: 82%;
+  }
+  .umbrellaLeft,
+  .umbrellaRight {
+    top: 18%;
+  }
+  .menuBannerContent {
+    margin-top: 45%;
+  }
+  .ball {
+    bottom: -15%;
+  }
+}
+.menuInnerBanner {
+  position: relative;
+  height: auto;
+  margin-top: 100px;
+}
+.menuInnerBanner .aboutBannerContentBox {
+  position: absolute;
+  left: 30%;
+  top: 10%;
+  text-align: center;
+}
+.menuInnerBanner .aboutBannerContentBox .aboutBannerTitle p:first-of-type {
+  position: relative;
+  right: 80px;
+}
+.menuInnerBanner .aboutBannerContentBox .aboutBannerTitle p:last-of-type {
+  position: relative;
+  left: 80px;
+}
+.menuTitleSection {
+  margin: 0px 0px 80px;
+  justify-content: center;
+}
+.menuTitle {
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 90px;
+}
+.menuTitle h1 {
+  color: rgb(44, 44, 44);
+}
+.menuTitle h1:hover {
+  text-decoration: none;
+  color: rgb(44, 44, 44);
+}
+.menuItemsContainer {
+  position: relative;
+  margin: 0px 8% 3%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.menuNavigationBox {
+  position: sticky;
+  z-index: 19;
+  bottom: 10px;
+  width: 20%;
+  padding-top: 5%;
+}
+.menuNavigationBox ul {
+  list-style-type: none;
+  padding: 0px;
+  position: relative;
+  right: 7px;
+}
+.menuNavigationBox li {
+  padding: 0px 0px 0px 8px;
+}
+.menuNavigationBox a {
+  color: rgb(44, 44, 44);
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.menuNavigationBox a.active {
+  color: rgb(255, 211, 35);
+}
+.menuNavigationBox a:hover {
+  color: rgb(255, 211, 35);
+  text-decoration: none;
+}
+.menuItemsSection {
+  position: relative;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 80%;
+}
+.menuCateTitle {
+  font-size: 16px;
+  position: relative;
+}
+.menuCateTitle::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 70%;
+  bottom: -5px;
+  left: 0px;
+  background: rgb(225, 225, 225);
+}
+.menuCateItems {
+  position: relative;
+  left: 2%;
+}
+.menuItems {
+  position: relative;
+  width: 32%;
+  margin: 0px 0.5% 2%;
+  padding: 5% 0px 0px;
+}
+.menuItems h6,
+.menuItems p {
+  text-align: center;
+  color: rgb(106, 106, 106);
+  padding: 0px 40px;
+  position: relative;
+}
+.menuItems p::first-letter,
+.menuItems strong::first-letter {
+  text-transform: uppercase;
+}
+.menuItems strong {
+  display: block;
+}
+.menuItems h6 {
+  text-transform: uppercase;
+}
+.foodCategory {
+  text-transform: uppercase;
+  text-align: center;
+}
+.foodCategory {
+  display: flex;
+}
+.foodCategory h3 {
+  text-align: center;
+  margin: 0px auto;
+  padding-bottom: 2%;
+  padding-top: 5%;
+  font-family: "Prota Basic";
+}
+.foodCategory h5 {
+  padding-right: 4px;
+}
+.foodCategory small {
+  padding-left: 4px;
+}
+.fullWidth {
+  width: 100%;
+}
+@media only screen and (min-width: 1920px) {
+  .menuItemsContainer {
+    margin: 3% 8%;
+  }
+}
+@media only screen and (min-width: 2160px) {
+  .menuItemsContainer {
+    margin: 3% 8%;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .menuItemsContainer {
+    margin: 3% 8%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .menuItems {
+    width: 32%;
+  }
+  .menuItems h6,
+  .menuItems p {
+    padding: 0px 20px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .menuTitle {
+    margin-top: -18px;
+    margin-right: 114px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .menuItems {
+    width: 48%;
+  }
+  .menuItems h6,
+  .menuItems p {
+    padding: 0px 10px;
+  }
+  .menuTitleSection {
+    margin: 0px 0px 30px;
+  }
+  .menuItemsContainer {
+    flex-direction: column;
+  }
+  .menuNavigationBox {
+    width: 100%;
+    text-align: center;
+  }
+  .menuItemsSection {
+    width: 100%;
+  }
+  .menuTitle {
+    margin-top: -18px;
+    margin-right: 194px;
+  }
+  .functionalContainer .menuTitle {
+    margin-top: -18px;
+    margin-right: 194px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .menuInnerBanner .aboutBannerContentBox {
+    position: absolute;
+    left: 5%;
+    top: 26%;
+    text-align: center;
+  }
+  .menuNavigationBox {
+    margin-top: 15%;
+  }
+  .menuTitle {
+    margin: 0px;
+  }
+  .menuTitle h1 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .menuInnerBanner .aboutBannerContentBox {
+    position: absolute;
+    left: 5%;
+    top: 24%;
+    text-align: center;
+  }
+  .menuTitle {
+    margin: 0px;
+  }
+}
+@media only screen and (max-width: 321px) {
+  .menuInnerBanner .aboutBannerContentBox {
+    position: absolute;
+    left: 5%;
+    top: 7%;
+    text-align: center;
+  }
+  .menuTitle {
+    margin: 0px;
+  }
+}
+.successBanner {
+  position: relative;
+  height: 60vh;
+  background: url("../img/franchise_banner.jpg") center center / cover no-repeat;
+  margin-top: 8%;
+}
+.successContainer {
+  text-align: center;
+  padding: 12% 0px 0px;
+  font-weight: 700;
+}
+.successContainer h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+#privacyBanner {
+  background: url("../img/privacy-policy.jpg") center top / cover no-repeat;
+}
+.locationBanner {
+  position: relative;
+  height: 650px;
+  width: 100%;
+  background: url("../img/location/locations-banner-2.jpg") center center /
+    cover no-repeat;
+  transform: scale(1.1);
+  top: 90px;
+}
+.locationMapContainer {
+  position: absolute;
+  right: 0px;
+  width: 50%;
+  height: 100%;
+  top: 0px;
+}
+.locationDotLayer,
+.locationImgLayer {
+  position: absolute;
+  right: 0px;
+  width: 100%;
+  height: 90%;
+  top: 0px;
+}
+.locationDotBox {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.locDot {
+  position: absolute;
+  height: 2%;
+  width: 2%;
+  border-radius: 50%;
+  z-index: 99;
+  cursor: pointer;
+}
+.locInfoBox {
+  position: absolute;
+  height: 150px;
+  width: 200px;
+  right: 23%;
+  top: 58%;
+  background: url("../img/location/location-yellow-rectangle.png") 0% 0% / cover;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  text-align: center;
+}
+.locInfoBox.active {
+  opacity: 1;
+}
+.locInfoBox a,
+.locInfoBox p {
+  align-self: center;
+  margin: 0px;
+}
+.locName {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+.locTotalNumber {
+  font-size: 30px;
+}
+#ahm .locDot {
+  top: 51%;
+  left: 10%;
+}
+#bang .locDot {
+  top: 78.5%;
+  left: 21%;
+}
+#mangalore .locDot {
+  top: 82.5%;
+  left: 14%;
+}
+#chen .locDot {
+  top: 79.5%;
+  left: 28%;
+}
+#kadapa .locDot {
+  top: 77.5%;
+  left: 25%;
+}
+#coimb .locDot {
+  top: 87.5%;
+  left: 20%;
+}
+#erode .locDot {
+  top: 92%;
+  left: 23%;
+}
+#trichy .locDot {
+  top: 92%;
+  left: 21%;
+}
+#thanjavur .locDot {
+  top: 92%;
+  left: 23%;
+}
+#madurai .locDot {
+  top: 94%;
+  left: 21%;
+}
+#delhi .locDot {
+  top: 33%;
+  left: 21.5%;
+}
+#guntur .locDot {
+  top: 72%;
+  left: 28%;
+}
+#guwah .locDot {
+  top: 41%;
+  left: 55%;
+}
+#hyd .locDot {
+  top: 67%;
+  left: 24.5%;
+}
+#warangal .locDot {
+  top: 69%;
+  left: 25.3%;
+}
+#nizam .locDot {
+  top: 67%;
+  left: 21.9%;
+}
+#karimNagar .locDot {
+  top: 67.3%;
+  left: 24%;
+}
+#indore .locDot {
+  top: 53.5%;
+  left: 17.5%;
+}
+#jabal .locDot {
+  top: 52%;
+  left: 30%;
+}
+#noida .locDot {
+  top: 35%;
+  left: 20.2%;
+}
+#jalan .locDot {
+  top: 24%;
+  left: 16.5%;
+}
+#kaki .locDot {
+  top: 69%;
+  left: 33%;
+}
+#kochi .locDot {
+  top: 95%;
+  left: 17.5%;
+}
+#kerala .locDot {
+  top: 97%;
+  left: 18%;
+}
+#trivandrum .locDot {
+  top: 91%;
+  left: 17%;
+}
+#kolk .locDot {
+  top: 52.5%;
+  left: 46.5%;
+}
+#mumbai .locDot {
+  top: 64%;
+  left: 10.5%;
+}
+#nagpur .locDot {
+  top: 59%;
+  left: 23%;
+}
+#nellore .locDot {
+  top: 80.5%;
+  left: 25%;
+}
+#pune .locDot {
+  top: 66%;
+  left: 15%;
+}
+#rajmun .locDot {
+  top: 69%;
+  left: 30.8%;
+}
+#surat .locDot {
+  top: 57.5%;
+  left: 11%;
+}
+#thane .locDot {
+  top: 62%;
+  left: 12%;
+}
+#vellore .locDot {
+  top: 81%;
+  left: 24%;
+}
+#vijay .locDot {
+  top: 70%;
+  left: 29%;
+}
+#vizag .locDot {
+  top: 66.5%;
+  left: 35%;
+}
+#pondy .locDot {
+  top: 86%;
+  left: 28%;
+}
+.totalStoreCountBox {
+  position: absolute;
+  right: 10%;
+  bottom: 4%;
+  text-align: right;
+}
+.storeCount {
+  font-family: "Open 24";
+  font-size: 100px;
+  margin-bottom: 0px;
+  line-height: 1;
+}
+.totalCountTagline {
+  font-size: 20px;
+}
+.locationImgLayer img {
+  max-width: 70%;
+  position: relative;
+  top: 5%;
+}
+.locMapLg {
+  display: none;
+}
+.locationsSearchContainer {
+  position: relative;
+  margin: 10% 0px;
+}
+.locationsSearchTitle {
+  text-align: center;
+  font-size: 32px;
+}
+.searchBox {
+  position: relative;
+  width: 60%;
+  left: 20%;
+}
+#myInput {
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: 1px solid rgb(221, 221, 221);
+  margin-bottom: 12px;
+}
+#myUL {
+  list-style-type: none;
+  margin: 0px;
+  display: none;
+  padding: 0px;
+  position: relative;
+  bottom: 10px;
+}
+#myUL li a {
+  border-right: 1px solid rgb(221, 221, 221);
+  border-bottom: 1px solid rgb(221, 221, 221);
+  border-left: 1px solid rgb(221, 221, 221);
+  border-image: initial;
+  border-top: none;
+  margin-top: -1px;
+  background-color: transparent;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  display: block;
+  cursor: pointer;
+}
+#myUL li a:hover:not(.header) {
+  background-color: rgb(238, 238, 238);
+}
+.locLocalLink {
+  font-size: 12px;
+  text-align: center;
+  color: rgb(44, 44, 44);
+  margin: 40px 0px;
+}
+.locationListContainer {
+  position: relative;
+  margin: 40px 0px 0px;
+  padding: 0px 10%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.locationBox {
+  position: relative;
+  width: 31%;
+  margin: 0px 0px 30px;
+  overflow: hidden;
+  height: 450px;
+}
+.locationBoxImg {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+}
+.locationBoxContent {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  bottom: 0px;
+  background: rgb(80, 80, 80);
+  height: 90px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 30px;
+  transition: all 0.3s ease 0s;
+}
+.locationBoxContent h4 {
+  text-transform: uppercase;
+}
+.locationBox:hover .locationBoxContent {
+  height: 90%;
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+}
+.locationBoxContent h4 {
+  margin-bottom: 30px;
+}
+.locationBoxContent p {
+  position: relative;
+  width: 80%;
+  left: 10%;
+  font-size: 16px;
+}
+.deliveryLink,
+.mapLink {
+  margin: 10px 3px;
+}
+.mapLink img {
+  max-width: 30px;
+}
+.locationBoxContent a:nth-of-type(2) img {
+  max-width: 33px;
+}
+.locationBoxContent a:nth-of-type(3) img {
+  max-width: 33px;
+}
+.locationBoxContent a:nth-of-type(4) img {
+  max-width: 33px;
+}
+.locationBoxContent a:last-of-type img {
+  max-width: 33px;
+}
+.colorFade {
+  filter: grayscale();
+}
+.locationBoxContent h4 {
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 1280px) {
+  .locationBanner {
+    height: 588px;
+  }
+  .locationDotBox {
+    left: 1.8%;
+  }
+  #ahm .locDot {
+    top: 52.8%;
+    left: 8.2%;
+  }
+  #bang .locDot {
+    top: 84.7%;
+    left: 20.5%;
+  }
+  #chen .locDot {
+    top: 84.5%;
+    left: 26.4%;
+  }
+  #trivandrum .locDot {
+    top: 98.6%;
+    left: 19%;
+  }
+  #nagercoil .locDot {
+    top: 100%;
+    left: 20%;
+  }
+  #odisha .locDot {
+    top: 59.5%;
+    left: 38.5%;
+  }
+  #thiruvannamalai .locDot {
+    top: 87%;
+    left: 24%;
+  }
+  #perintalmanna .locDot {
+    top: 91%;
+    left: 17.5%;
+  }
+  #calicut .locDot {
+    top: 90%;
+    left: 16.5%;
+  }
+  #thiruvella .locDot {
+    top: 96%;
+    left: 18%;
+  }
+  #hosur .locDot {
+    top: 85.8%;
+    left: 20.8%;
+  }
+  #mysore .locDot {
+    top: 87%;
+    left: 18.5%;
+  }
+  #kanchipuram .locDot {
+    top: 85%;
+    left: 25.5%;
+  }
+  #punjab .locDot {
+    top: 26%;
+    left: 14.5%;
+  }
+  #jaipur .locDot {
+    top: 40%;
+    left: 15.5%;
+  }
+  #chattisgarh .locDot {
+    top: 58.5%;
+    left: 30%;
+  }
+  #thissur .locDot {
+    top: 92.3%;
+    left: 17.1%;
+  }
+  #pallakad .locDot {
+    top: 92%;
+    left: 18.7%;
+  }
+  #kochi .locDot {
+    top: 94%;
+    left: 17.5%;
+  }
+  #coimb .locDot {
+    top: 91%;
+    left: 19.5%;
+  }
+  #salem .locDot {
+    top: 89%;
+    left: 22%;
+  }
+  #delhi .locDot {
+    top: 33%;
+    left: 19%;
+  }
+  #guntur .locDot {
+    top: 74%;
+    left: 27%;
+  }
+  #guwah .locDot {
+    top: 42%;
+    left: 54%;
+  }
+  #madurai .locDot {
+    top: 94.5%;
+    left: 22%;
+  }
+  #trichy .locDot {
+    top: 91.5%;
+    left: 23%;
+  }
+  #thanjavur .locDot {
+    top: 91.5%;
+    left: 25%;
+  }
+  #karur .locDot {
+    top: 91%;
+    left: 21.5%;
+  }
+  #kadapa .locDot {
+    top: 79.5%;
+    left: 23.5%;
+  }
+  #mangalore .locDot {
+    top: 85.3%;
+    left: 14.3%;
+  }
+  #hyd .locDot {
+    top: 71%;
+    left: 22.5%;
+  }
+  #indore .locDot {
+    top: 51%;
+    left: 16.5%;
+  }
+  #jabal .locDot {
+    top: 52%;
+    left: 25.7%;
+  }
+  #jalan .locDot {
+    top: 24.5%;
+    left: 15.5%;
+  }
+  #kaki .locDot {
+    top: 72%;
+    left: 31.5%;
+  }
+  #kolk .locDot {
+    top: 54.5%;
+    left: 46.5%;
+  }
+  #mumbai .locDot {
+    top: 65.5%;
+    left: 9%;
+  }
+  #nagpur .locDot {
+    top: 59%;
+    left: 24%;
+  }
+  #nellore .locDot {
+    top: 79.6%;
+    left: 26.2%;
+  }
+  #tirupathi .locDot {
+    top: 82.5%;
+    left: 24.5%;
+  }
+  #erode .locDot {
+    top: 90%;
+    left: 21%;
+  }
+  #pune .locDot {
+    top: 67.5%;
+    left: 11.2%;
+  }
+  #rajmun .locDot {
+    top: 72%;
+    left: 29.8%;
+  }
+  #surat .locDot {
+    top: 59%;
+    left: 8.9%;
+  }
+  #thane .locDot {
+    top: 65%;
+    left: 11.5%;
+  }
+  #vellore .locDot {
+    top: 85%;
+    left: 24%;
+  }
+  #vijay .locDot {
+    top: 73.5%;
+    left: 27.5%;
+  }
+  #vizag .locDot {
+    top: 69.5%;
+    left: 34%;
+  }
+  #pondy .locDot {
+    top: 88%;
+    left: 25.4%;
+  }
+}
+@media only screen and (min-width: 1336px) {
+  .locationBanner {
+    height: 615px;
+  }
+  .locationDotBox {
+    left: 1.9%;
+  }
+  #rajmun .locDot {
+    top: 71.7%;
+    left: 30.2%;
+  }
+  #thanjavur .locDot {
+    top: 91.5%;
+    left: 24%;
+  }
+}
+@media only screen and (min-width: 1370px) {
+  .locationBanner {
+    height: 631px;
+  }
+  .locationDotBox {
+    left: 2%;
+  }
+  #ahm .locDot {
+    top: 52.8%;
+    left: 8.2%;
+  }
+  #bang .locDot {
+    top: 84.7%;
+    left: 20.5%;
+  }
+  #chen .locDot {
+    top: 84.5%;
+    left: 26.4%;
+  }
+  #trivandrum .locDot {
+    top: 98.6%;
+    left: 19%;
+  }
+  #nagercoil .locDot {
+    top: 100%;
+    left: 20%;
+  }
+  #odisha .locDot {
+    top: 59.5%;
+    left: 38.5%;
+  }
+  #thiruvannamalai .locDot {
+    top: 87%;
+    left: 24%;
+  }
+  #perintalmanna .locDot {
+    top: 91%;
+    left: 17.5%;
+  }
+  #calicut .locDot {
+    top: 90%;
+    left: 16.5%;
+  }
+  #thiruvella .locDot {
+    top: 96%;
+    left: 18%;
+  }
+  #hosur .locDot {
+    top: 85.8%;
+    left: 20.8%;
+  }
+  #mysore .locDot {
+    top: 87%;
+    left: 18.5%;
+  }
+  #kanchipuram .locDot {
+    top: 85%;
+    left: 25.5%;
+  }
+  #punjab .locDot {
+    top: 26%;
+    left: 14.5%;
+  }
+  #jaipur .locDot {
+    top: 40%;
+    left: 15.5%;
+  }
+  #chattisgarh .locDot {
+    top: 58.5%;
+    left: 30%;
+  }
+  #thissur .locDot {
+    top: 92.3%;
+    left: 17.1%;
+  }
+  #pallakad .locDot {
+    top: 92%;
+    left: 18.7%;
+  }
+  #kochi .locDot {
+    top: 94%;
+    left: 17.5%;
+  }
+  #coimb .locDot {
+    top: 91%;
+    left: 19.5%;
+  }
+  #salem .locDot {
+    top: 89%;
+    left: 22%;
+  }
+  #delhi .locDot {
+    top: 33%;
+    left: 19%;
+  }
+  #guntur .locDot {
+    top: 74%;
+    left: 27%;
+  }
+  #guwah .locDot {
+    top: 42%;
+    left: 54%;
+  }
+  #madurai .locDot {
+    top: 94.5%;
+    left: 22%;
+  }
+  #trichy .locDot {
+    top: 91.5%;
+    left: 23%;
+  }
+  #thanjavur .locDot {
+    top: 91.5%;
+    left: 24%;
+  }
+  #karur .locDot {
+    top: 91%;
+    left: 21.5%;
+  }
+  #kadapa .locDot {
+    top: 79.5%;
+    left: 23.5%;
+  }
+  #mangalore .locDot {
+    top: 85.3%;
+    left: 14.3%;
+  }
+  #hyd .locDot {
+    top: 71%;
+    left: 22.5%;
+  }
+  #indore .locDot {
+    top: 51%;
+    left: 16.5%;
+  }
+  #jabal .locDot {
+    top: 52%;
+    left: 25.7%;
+  }
+  #jalan .locDot {
+    top: 24.5%;
+    left: 15.5%;
+  }
+  #kaki .locDot {
+    top: 72%;
+    left: 31.7%;
+  }
+  #kolk .locDot {
+    top: 54.5%;
+    left: 46.5%;
+  }
+  #mumbai .locDot {
+    top: 65.5%;
+    left: 9%;
+  }
+  #nagpur .locDot {
+    top: 59%;
+    left: 24%;
+  }
+  #nellore .locDot {
+    top: 79.6%;
+    left: 26.2%;
+  }
+  #tirupathi .locDot {
+    top: 82.5%;
+    left: 24.5%;
+  }
+  #erode .locDot {
+    top: 90%;
+    left: 21%;
+  }
+  #pune .locDot {
+    top: 67.5%;
+    left: 11.2%;
+  }
+  #rajmun .locDot {
+    top: 72%;
+    left: 30.6%;
+  }
+  #surat .locDot {
+    top: 59%;
+    left: 8.9%;
+  }
+  #thane .locDot {
+    top: 65%;
+    left: 11.5%;
+  }
+  #vellore .locDot {
+    top: 85%;
+    left: 24%;
+  }
+  #vijay .locDot {
+    top: 73.5%;
+    left: 27.5%;
+  }
+  #vizag .locDot {
+    top: 69.5%;
+    left: 34%;
+  }
+  #pondy .locDot {
+    top: 88%;
+    left: 25.4%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .locationDotBox {
+    left: 1.6%;
+  }
+  .locationBanner {
+    height: 658px;
+  }
+  #ahm .locDot {
+    top: 52.8%;
+    left: 8.2%;
+  }
+  #bang .locDot {
+    top: 84.7%;
+    left: 20.5%;
+  }
+  #chen .locDot {
+    top: 84.5%;
+    left: 26.4%;
+  }
+  #trivandrum .locDot {
+    top: 98.6%;
+    left: 19%;
+  }
+  #nagercoil .locDot {
+    top: 100%;
+    left: 20%;
+  }
+  #odisha .locDot {
+    top: 59.5%;
+    left: 38.5%;
+  }
+  #thiruvannamalai .locDot {
+    top: 87%;
+    left: 24%;
+  }
+  #perintalmanna .locDot {
+    top: 91%;
+    left: 17.5%;
+  }
+  #calicut .locDot {
+    top: 90%;
+    left: 16.5%;
+  }
+  #thiruvella .locDot {
+    top: 96%;
+    left: 18%;
+  }
+  #hosur .locDot {
+    top: 85.8%;
+    left: 20.8%;
+  }
+  #mysore .locDot {
+    top: 87%;
+    left: 18.5%;
+  }
+  #kanchipuram .locDot {
+    top: 85%;
+    left: 25.5%;
+  }
+  #punjab .locDot {
+    top: 26%;
+    left: 14.5%;
+  }
+  #jaipur .locDot {
+    top: 40%;
+    left: 16.5%;
+  }
+  #chattisgarh .locDot {
+    top: 58.5%;
+    left: 30%;
+  }
+  #thissur .locDot {
+    top: 92.3%;
+    left: 17.1%;
+  }
+  #pallakad .locDot {
+    top: 92%;
+    left: 18.7%;
+  }
+  #kochi .locDot {
+    top: 94%;
+    left: 17.5%;
+  }
+  #coimb .locDot {
+    top: 91%;
+    left: 19.5%;
+  }
+  #salem .locDot {
+    top: 89%;
+    left: 22%;
+  }
+  #delhi .locDot {
+    top: 33%;
+    left: 19%;
+  }
+  #guntur .locDot {
+    top: 74%;
+    left: 27%;
+  }
+  #guwah .locDot {
+    top: 42%;
+    left: 54%;
+  }
+  #madurai .locDot {
+    top: 94.5%;
+    left: 22%;
+  }
+  #trichy .locDot {
+    top: 91.5%;
+    left: 23%;
+  }
+  #thanjavur .locDot {
+    top: 91.5%;
+    left: 24.2%;
+  }
+  #karur .locDot {
+    top: 91%;
+    left: 21.5%;
+  }
+  #kadapa .locDot {
+    top: 79.5%;
+    left: 23.5%;
+  }
+  #mangalore .locDot {
+    top: 85.3%;
+    left: 14.3%;
+  }
+  #hyd .locDot {
+    top: 71%;
+    left: 22.5%;
+  }
+  #indore .locDot {
+    top: 51%;
+    left: 16.5%;
+  }
+  #jabal .locDot {
+    top: 52%;
+    left: 25.7%;
+  }
+  #jalan .locDot {
+    top: 24.5%;
+    left: 15.5%;
+  }
+  #kaki .locDot {
+    top: 72.1%;
+    left: 31.5%;
+  }
+  #kolk .locDot {
+    top: 54.5%;
+    left: 45.5%;
+  }
+  #mumbai .locDot {
+    top: 65.5%;
+    left: 9%;
+  }
+  #nagpur .locDot {
+    top: 59%;
+    left: 24%;
+  }
+  #nellore .locDot {
+    top: 79.6%;
+    left: 26.2%;
+  }
+  #tirupathi .locDot {
+    top: 82.5%;
+    left: 24.5%;
+  }
+  #erode .locDot {
+    top: 90%;
+    left: 21%;
+  }
+  #pune .locDot {
+    top: 67.5%;
+    left: 11.2%;
+  }
+  #rajmun .locDot {
+    top: 72%;
+    left: 30.8%;
+  }
+  #surat .locDot {
+    top: 59%;
+    left: 8.9%;
+  }
+  #thane .locDot {
+    top: 65%;
+    left: 11.5%;
+  }
+  #vellore .locDot {
+    top: 85%;
+    left: 24%;
+  }
+  #vijay .locDot {
+    top: 73.5%;
+    left: 27.5%;
+  }
+  #vizag .locDot {
+    top: 69.5%;
+    left: 34%;
+  }
+  #pondy .locDot {
+    top: 88%;
+    left: 25.4%;
+  }
+}
+@media only screen and (min-width: 1536px) {
+  .locDot {
+    top: 1%;
+    right: 2%;
+  }
+  .locationBanner {
+    height: 655px;
+  }
+  .locationDotBox {
+    left: 0.2%;
+  }
+  #ahm .locDot {
+    top: 52.8%;
+    left: 9.2%;
+  }
+  #bang .locDot {
+    top: 84.7%;
+    left: 20.5%;
+  }
+  #chen .locDot {
+    top: 84.5%;
+    left: 26.4%;
+  }
+  #trivandrum .locDot {
+    top: 98.6%;
+    left: 19%;
+  }
+  #nagercoil .locDot {
+    top: 100%;
+    left: 20%;
+  }
+  #odisha .locDot {
+    top: 59.5%;
+    left: 37.5%;
+  }
+  #thiruvannamalai .locDot {
+    top: 87%;
+    left: 24%;
+  }
+  #perintalmanna .locDot {
+    top: 91%;
+    left: 17.5%;
+  }
+  #calicut .locDot {
+    top: 90%;
+    left: 16.5%;
+  }
+  #thiruvella .locDot {
+    top: 96%;
+    left: 18%;
+  }
+  #hosur .locDot {
+    top: 85.8%;
+    left: 20.8%;
+  }
+  #mysore .locDot {
+    top: 87%;
+    left: 18.5%;
+  }
+  #kanchipuram .locDot {
+    top: 85%;
+    left: 25.5%;
+  }
+  #punjab .locDot {
+    top: 26%;
+    left: 15.5%;
+  }
+  #jaipur .locDot {
+    top: 40%;
+    left: 16.5%;
+  }
+  #chattisgarh .locDot {
+    top: 58.5%;
+    left: 30%;
+  }
+  #thissur .locDot {
+    top: 92.3%;
+    left: 17.1%;
+  }
+  #pallakad .locDot {
+    top: 92%;
+    left: 18.7%;
+  }
+  #kochi .locDot {
+    top: 94%;
+    left: 17.5%;
+  }
+  #coimb .locDot {
+    top: 91%;
+    left: 19.5%;
+  }
+  #salem .locDot {
+    top: 89%;
+    left: 22%;
+  }
+  #delhi .locDot {
+    top: 33%;
+    left: 19%;
+  }
+  #guntur .locDot {
+    top: 74%;
+    left: 27%;
+  }
+  #guwah .locDot {
+    top: 42%;
+    left: 52%;
+  }
+  #madurai .locDot {
+    top: 94.5%;
+    left: 22%;
+  }
+  #trichy .locDot {
+    top: 91.5%;
+    left: 23%;
+  }
+  #thanjavur .locDot {
+    top: 91.5%;
+    left: 24%;
+  }
+  #karur .locDot {
+    top: 91%;
+    left: 21.5%;
+  }
+  #kadapa .locDot {
+    top: 79.5%;
+    left: 23.5%;
+  }
+  #mangalore .locDot {
+    top: 85.3%;
+    left: 14.3%;
+  }
+  #hyd .locDot {
+    top: 71%;
+    left: 22.5%;
+  }
+  #indore .locDot {
+    top: 51%;
+    left: 17.5%;
+  }
+  #jabal .locDot {
+    top: 52%;
+    left: 25.7%;
+  }
+  #jalan .locDot {
+    top: 24.5%;
+    left: 15.5%;
+  }
+  #kaki .locDot {
+    top: 72.5%;
+    left: 31%;
+  }
+  #kolk .locDot {
+    top: 54.5%;
+    left: 44.5%;
+  }
+  #mumbai .locDot {
+    top: 65.5%;
+    left: 10%;
+  }
+  #nagpur .locDot {
+    top: 59%;
+    left: 24%;
+  }
+  #nellore .locDot {
+    top: 79.6%;
+    left: 26.2%;
+  }
+  #tirupathi .locDot {
+    top: 82.5%;
+    left: 24.5%;
+  }
+  #erode .locDot {
+    top: 90%;
+    left: 21%;
+  }
+  #pune .locDot {
+    top: 67.5%;
+    left: 12.2%;
+  }
+  #rajmun .locDot {
+    top: 72%;
+    left: 29.8%;
+  }
+  #surat .locDot {
+    top: 59%;
+    left: 9.9%;
+  }
+  #thane .locDot {
+    top: 65%;
+    left: 11.5%;
+  }
+  #vellore .locDot {
+    top: 85%;
+    left: 24%;
+  }
+  #vijay .locDot {
+    top: 73.5%;
+    left: 27.5%;
+  }
+  #vizag .locDot {
+    top: 69.5%;
+    left: 33%;
+  }
+  #pondy .locDot {
+    top: 88%;
+    left: 25.4%;
+  }
+}
+@media only screen and (min-width: 1920px) {
+  .locationBanner {
+    height: 806px;
+  }
+  .locationDotBox {
+    left: 0px;
+  }
+  .locMap {
+    display: none;
+  }
+  .locMapLg {
+    display: block;
+  }
+  #ahm .locDot {
+    top: 57.4%;
+    left: 10.5%;
+  }
+  #bang .locDot {
+    top: 92%;
+    left: 22.3%;
+  }
+  #hosur .locDot {
+    top: 92.8%;
+    left: 22.8%;
+  }
+  #chen .locDot {
+    top: 91.7%;
+    left: 28.8%;
+  }
+  #coimb .locDot {
+    top: 98.5%;
+    left: 20.8%;
+  }
+  #erode .locDot {
+    top: 97.3%;
+    left: 22.5%;
+  }
+  #delhi .locDot {
+    top: 36%;
+    left: 22%;
+  }
+  #guntur .locDot {
+    top: 80.5%;
+    left: 29%;
+  }
+  #guwah .locDot {
+    top: 46%;
+    left: 56.5%;
+  }
+  #hyd .locDot {
+    top: 76.6%;
+    left: 24.4%;
+  }
+  #indore .locDot {
+    top: 56%;
+    left: 19%;
+  }
+  #karimNagar .locDot {
+    top: 73.4%;
+    left: 26.2%;
+  }
+  #jabal .locDot {
+    top: 56.4%;
+    left: 28.2%;
+  }
+  #jalan .locDot {
+    top: 26%;
+    left: 18%;
+  }
+  #kaki .locDot {
+    top: 78.4%;
+    left: 33.4%;
+  }
+  #kolk .locDot {
+    top: 58.8%;
+    left: 48.2%;
+  }
+  #mumbai .locDot {
+    top: 71%;
+    left: 11%;
+  }
+  #nagpur .locDot {
+    top: 64%;
+    left: 26%;
+  }
+  #chattisgarh .locDot {
+    top: 63.2%;
+    left: 32.6%;
+  }
+  #calicut .locDot {
+    top: 97.7%;
+    left: 17.8%;
+  }
+  #perintalmanna .locDot {
+    top: 98.5%;
+    left: 18.9%;
+  }
+  #pallakad .locDot {
+    top: 99.3%;
+    left: 19.9%;
+  }
+  #thissur .locDot {
+    top: 100.3%;
+    left: 18.9%;
+  }
+  #thiruvella .locDot {
+    top: 103.7%;
+    left: 19.9%;
+  }
+  #nellore .locDot {
+    top: 86.5%;
+    left: 28%;
+  }
+  #odisha .locDot {
+    top: 64.56%;
+    left: 40.4%;
+  }
+  #pune .locDot {
+    top: 72.9%;
+    left: 13.5%;
+  }
+  #rajmun .locDot {
+    top: 78%;
+    left: 32.4%;
+  }
+  #surat .locDot {
+    top: 60.5%;
+    left: 13%;
+  }
+  #thane .locDot {
+    top: 65%;
+    left: 14%;
+  }
+  #vellore .locDot {
+    top: 92%;
+    left: 25.9%;
+  }
+  #vijay .locDot {
+    top: 79.9%;
+    left: 29.8%;
+  }
+  #vizag .locDot {
+    top: 76.3%;
+    left: 36%;
+  }
+  #kochi .locDot {
+    top: 102.1%;
+    left: 19%;
+  }
+  #trivandrum .locDot {
+    top: 107%;
+    left: 20.7%;
+  }
+  #pondy .locDot {
+    top: 95.4%;
+    left: 27.4%;
+  }
+  #tirupathi .locDot {
+    top: 89.9%;
+    left: 26.8%;
+  }
+  #kadapa .locDot {
+    top: 86.6%;
+    left: 25.6%;
+  }
+  #noida .locDot {
+    top: 37.2%;
+    left: 22%;
+  }
+  #warangal .locDot {
+    top: 75%;
+    left: 27%;
+  }
+  #nagercoil .locDot {
+    top: 108.4%;
+    left: 22%;
+  }
+  #salem .locDot {
+    top: 96.5%;
+    left: 23.8%;
+  }
+  #surat .locDot {
+    top: 63.8%;
+    left: 10.8%;
+  }
+  #karur .locDot {
+    top: 99%;
+    left: 23.5%;
+  }
+  #kanchipuram .locDot {
+    top: 92.3%;
+    left: 27.3%;
+  }
+  #thiruvannamalai .locDot {
+    top: 94.6%;
+    left: 26%;
+  }
+  #nizam .locDot {
+    top: 72.7%;
+    left: 23.7%;
+  }
+  #mangalore .locDot {
+    top: 92.5%;
+    left: 15.9%;
+  }
+  #mysore .locDot {
+    top: 94.5%;
+    left: 20%;
+  }
+  #delhi .locDot {
+    top: 36%;
+    left: 21%;
+  }
+  #jaipur .locDot {
+    top: 43.2%;
+    left: 18%;
+  }
+  #trichy .locDot {
+    top: 99.5%;
+    left: 25%;
+  }
+  #thanjavur .locDot {
+    top: 99.5%;
+    left: 27%;
+  }
+  #madurai .locDot {
+    top: 102.5%;
+    left: 23.5%;
+  }
+  #kerala .locDot {
+    top: 106%;
+    left: 19%;
+  }
+  #punjab .locDot {
+    top: 28%;
+    left: 17%;
+  }
+}
+@media only screen and (min-width: 2160px) {
+  .locationBanner {
+    height: 917px;
+  }
+  #ahm .locDot {
+    top: 57.4%;
+    left: 10.5%;
+  }
+  #bang .locDot {
+    top: 92%;
+    left: 22.3%;
+  }
+  #hosur .locDot {
+    top: 92.8%;
+    left: 22.8%;
+  }
+  #chen .locDot {
+    top: 91.7%;
+    left: 28.8%;
+  }
+  #coimb .locDot {
+    top: 98.5%;
+    left: 20.8%;
+  }
+  #erode .locDot {
+    top: 97.3%;
+    left: 22.5%;
+  }
+  #delhi .locDot {
+    top: 36%;
+    left: 22%;
+  }
+  #guntur .locDot {
+    top: 80.5%;
+    left: 29%;
+  }
+  #guwah .locDot {
+    top: 46%;
+    left: 56.5%;
+  }
+  #hyd .locDot {
+    top: 76.6%;
+    left: 24.4%;
+  }
+  #indore .locDot {
+    top: 56%;
+    left: 19%;
+  }
+  #karimNagar .locDot {
+    top: 73.4%;
+    left: 26.2%;
+  }
+  #jabal .locDot {
+    top: 56.4%;
+    left: 28.2%;
+  }
+  #jalan .locDot {
+    top: 26%;
+    left: 18%;
+  }
+  #kaki .locDot {
+    top: 78.4%;
+    left: 33.4%;
+  }
+  #kolk .locDot {
+    top: 58.8%;
+    left: 48.2%;
+  }
+  #mumbai .locDot {
+    top: 71%;
+    left: 11%;
+  }
+  #nagpur .locDot {
+    top: 64%;
+    left: 26%;
+  }
+  #chattisgarh .locDot {
+    top: 63.2%;
+    left: 32.6%;
+  }
+  #calicut .locDot {
+    top: 97.7%;
+    left: 17.8%;
+  }
+  #perintalmanna .locDot {
+    top: 98.5%;
+    left: 18.9%;
+  }
+  #pallakad .locDot {
+    top: 99.3%;
+    left: 19.9%;
+  }
+  #thissur .locDot {
+    top: 100.3%;
+    left: 18.9%;
+  }
+  #thiruvella .locDot {
+    top: 103.7%;
+    left: 19.9%;
+  }
+  #nellore .locDot {
+    top: 86.5%;
+    left: 28%;
+  }
+  #odisha .locDot {
+    top: 64.56%;
+    left: 40.4%;
+  }
+  #pune .locDot {
+    top: 72.9%;
+    left: 13.5%;
+  }
+  #rajmun .locDot {
+    top: 78%;
+    left: 32.4%;
+  }
+  #surat .locDot {
+    top: 60.5%;
+    left: 13%;
+  }
+  #thane .locDot {
+    top: 65%;
+    left: 14%;
+  }
+  #vellore .locDot {
+    top: 92%;
+    left: 25.9%;
+  }
+  #vijay .locDot {
+    top: 79.9%;
+    left: 29.8%;
+  }
+  #vizag .locDot {
+    top: 75.6%;
+    left: 36%;
+  }
+  #kochi .locDot {
+    top: 102.1%;
+    left: 19%;
+  }
+  #trivandrum .locDot {
+    top: 107%;
+    left: 20.7%;
+  }
+  #pondy .locDot {
+    top: 95.4%;
+    left: 27.4%;
+  }
+  #tirupathi .locDot {
+    top: 89.9%;
+    left: 26.8%;
+  }
+  #kadapa .locDot {
+    top: 86%;
+    left: 25.6%;
+  }
+  #noida .locDot {
+    top: 37.2%;
+    left: 22%;
+  }
+  #warangal .locDot {
+    top: 75%;
+    left: 27%;
+  }
+  #nagercoil .locDot {
+    top: 108.4%;
+    left: 22%;
+  }
+  #salem .locDot {
+    top: 96.5%;
+    left: 23.8%;
+  }
+  #surat .locDot {
+    top: 63.8%;
+    left: 10.8%;
+  }
+  #karur .locDot {
+    top: 99%;
+    left: 23.5%;
+  }
+  #kanchipuram .locDot {
+    top: 92.3%;
+    left: 27.3%;
+  }
+  #thiruvannamalai .locDot {
+    top: 94.6%;
+    left: 26%;
+  }
+  #nizam .locDot {
+    top: 72.7%;
+    left: 23.7%;
+  }
+  #mangalore .locDot {
+    top: 92.5%;
+    left: 15.9%;
+  }
+  #mysore .locDot {
+    top: 94.5%;
+    left: 20%;
+  }
+  #delhi .locDot {
+    top: 36%;
+    left: 21%;
+  }
+  #jaipur .locDot {
+    top: 43.2%;
+    left: 18%;
+  }
+  #trichy .locDot {
+    top: 99.5%;
+    left: 25%;
+  }
+  #thanjavur .locDot {
+    top: 99.5%;
+    left: 27%;
+  }
+  #madurai .locDot {
+    top: 102.5%;
+    left: 23.5%;
+  }
+  #kerala .locDot {
+    top: 106%;
+    left: 19%;
+  }
+  #punjab .locDot {
+    top: 28%;
+    left: 17%;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .locationBanner {
+    height: 1091px;
+  }
+  #ahm .locDot {
+    top: 57.4%;
+    left: 10.5%;
+  }
+  #bang .locDot {
+    top: 92%;
+    left: 22.3%;
+  }
+  #hosur .locDot {
+    top: 92.8%;
+    left: 22.8%;
+  }
+  #chen .locDot {
+    top: 91.7%;
+    left: 28.8%;
+  }
+  #coimb .locDot {
+    top: 98.5%;
+    left: 20.8%;
+  }
+  #erode .locDot {
+    top: 97.3%;
+    left: 22.5%;
+  }
+  #delhi .locDot {
+    top: 36%;
+    left: 22%;
+  }
+  #guntur .locDot {
+    top: 80.5%;
+    left: 29%;
+  }
+  #guwah .locDot {
+    top: 46%;
+    left: 56.5%;
+  }
+  #hyd .locDot {
+    top: 76.6%;
+    left: 24.4%;
+  }
+  #indore .locDot {
+    top: 56%;
+    left: 19%;
+  }
+  #karimNagar .locDot {
+    top: 73.4%;
+    left: 26.2%;
+  }
+  #jabal .locDot {
+    top: 56.4%;
+    left: 28.2%;
+  }
+  #jalan .locDot {
+    top: 26%;
+    left: 18%;
+  }
+  #kaki .locDot {
+    top: 78.4%;
+    left: 33.4%;
+  }
+  #kolk .locDot {
+    top: 58.8%;
+    left: 48.2%;
+  }
+  #mumbai .locDot {
+    top: 71%;
+    left: 11%;
+  }
+  #nagpur .locDot {
+    top: 64%;
+    left: 26%;
+  }
+  #chattisgarh .locDot {
+    top: 63.2%;
+    left: 32.6%;
+  }
+  #calicut .locDot {
+    top: 97.7%;
+    left: 17.8%;
+  }
+  #perintalmanna .locDot {
+    top: 98.5%;
+    left: 18.9%;
+  }
+  #pallakad .locDot {
+    top: 99.3%;
+    left: 19.9%;
+  }
+  #thissur .locDot {
+    top: 100.3%;
+    left: 18.9%;
+  }
+  #thiruvella .locDot {
+    top: 103.7%;
+    left: 19.9%;
+  }
+  #nellore .locDot {
+    top: 86.5%;
+    left: 28%;
+  }
+  #odisha .locDot {
+    top: 64.56%;
+    left: 40.4%;
+  }
+  #pune .locDot {
+    top: 72.9%;
+    left: 13.5%;
+  }
+  #rajmun .locDot {
+    top: 78%;
+    left: 32.4%;
+  }
+  #surat .locDot {
+    top: 60.5%;
+    left: 13%;
+  }
+  #thane .locDot {
+    top: 65%;
+    left: 14%;
+  }
+  #vellore .locDot {
+    top: 92%;
+    left: 25.9%;
+  }
+  #vijay .locDot {
+    top: 79.9%;
+    left: 29.8%;
+  }
+  #vizag .locDot {
+    top: 75.3%;
+    left: 36%;
+  }
+  #kochi .locDot {
+    top: 102.1%;
+    left: 19%;
+  }
+  #trivandrum .locDot {
+    top: 107%;
+    left: 20.7%;
+  }
+  #pondy .locDot {
+    top: 95.4%;
+    left: 27.4%;
+  }
+  #tirupathi .locDot {
+    top: 89.9%;
+    left: 26.8%;
+  }
+  #kadapa .locDot {
+    top: 85.6%;
+    left: 25.6%;
+  }
+  #noida .locDot {
+    top: 37.2%;
+    left: 22%;
+  }
+  #warangal .locDot {
+    top: 75%;
+    left: 27%;
+  }
+  #nagercoil .locDot {
+    top: 108.4%;
+    left: 22%;
+  }
+  #salem .locDot {
+    top: 96.5%;
+    left: 23.8%;
+  }
+  #surat .locDot {
+    top: 63.8%;
+    left: 10.8%;
+  }
+  #karur .locDot {
+    top: 99%;
+    left: 23.5%;
+  }
+  #kanchipuram .locDot {
+    top: 92.3%;
+    left: 27.3%;
+  }
+  #thiruvannamalai .locDot {
+    top: 94.6%;
+    left: 26%;
+  }
+  #nizam .locDot {
+    top: 72.7%;
+    left: 23.7%;
+  }
+  #mangalore .locDot {
+    top: 92.5%;
+    left: 15.9%;
+  }
+  #mysore .locDot {
+    top: 94.5%;
+    left: 20%;
+  }
+  #delhi .locDot {
+    top: 36%;
+    left: 21%;
+  }
+  #jaipur .locDot {
+    top: 43.2%;
+    left: 18%;
+  }
+  #trichy .locDot {
+    top: 99.5%;
+    left: 25%;
+  }
+  #thanjavur .locDot {
+    top: 99.5%;
+    left: 27%;
+  }
+  #madurai .locDot {
+    top: 102.5%;
+    left: 23.5%;
+  }
+  #kerala .locDot {
+    top: 106%;
+    left: 19%;
+  }
+  #punjab .locDot {
+    top: 28%;
+    left: 17%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .locationBanner {
+    overflow: hidden;
+  }
+  .locationMapContainer {
+    right: -5%;
+    width: 63%;
+  }
+  .totalStoreCountBox {
+    right: 20%;
+  }
+  .locationBanner {
+    height: 582px;
+  }
+  .locationDotBox {
+    left: 1.8%;
+  }
+  #ahm .locDot {
+    top: 52.8%;
+    left: 8.2%;
+  }
+  #bang .locDot {
+    top: 84.7%;
+    left: 20.5%;
+  }
+  #chen .locDot {
+    top: 84.5%;
+    left: 26.4%;
+  }
+  #trivandrum .locDot {
+    top: 98.6%;
+    left: 19%;
+  }
+  #nagercoil .locDot {
+    top: 100%;
+    left: 20%;
+  }
+  #odisha .locDot {
+    top: 59.5%;
+    left: 38.5%;
+  }
+  #thiruvannamalai .locDot {
+    top: 87%;
+    left: 24%;
+  }
+  #perintalmanna .locDot {
+    top: 91%;
+    left: 17.5%;
+  }
+  #calicut .locDot {
+    top: 90%;
+    left: 16.5%;
+  }
+  #thiruvella .locDot {
+    top: 96%;
+    left: 18%;
+  }
+  #hosur .locDot {
+    top: 85.8%;
+    left: 20.8%;
+  }
+  #mysore .locDot {
+    top: 87%;
+    left: 18.5%;
+  }
+  #kanchipuram .locDot {
+    top: 85%;
+    left: 25.5%;
+  }
+  #punjab .locDot {
+    top: 26%;
+    left: 14.5%;
+  }
+  #jaipur .locDot {
+    top: 40%;
+    left: 15.5%;
+  }
+  #chattisgarh .locDot {
+    top: 58.5%;
+    left: 30%;
+  }
+  #thissur .locDot {
+    top: 92.3%;
+    left: 17.1%;
+  }
+  #pallakad .locDot {
+    top: 92%;
+    left: 18.7%;
+  }
+  #kochi .locDot {
+    top: 94%;
+    left: 17.5%;
+  }
+  #coimb .locDot {
+    top: 91%;
+    left: 19.5%;
+  }
+  #salem .locDot {
+    top: 89%;
+    left: 22%;
+  }
+  #delhi .locDot {
+    top: 33%;
+    left: 19%;
+  }
+  #guntur .locDot {
+    top: 74%;
+    left: 27%;
+  }
+  #guwah .locDot {
+    top: 42%;
+    left: 54%;
+  }
+  #madurai .locDot {
+    top: 94.5%;
+    left: 22%;
+  }
+  #trichy .locDot {
+    top: 91.5%;
+    left: 23%;
+  }
+  #thanjavur .locDot {
+    top: 91.5%;
+    left: 25%;
+  }
+  #karur .locDot {
+    top: 91%;
+    left: 21.5%;
+  }
+  #kadapa .locDot {
+    top: 79.5%;
+    left: 23.5%;
+  }
+  #mangalore .locDot {
+    top: 85.3%;
+    left: 14.3%;
+  }
+  #hyd .locDot {
+    top: 71%;
+    left: 22.5%;
+  }
+  #indore .locDot {
+    top: 51%;
+    left: 16.5%;
+  }
+  #jabal .locDot {
+    top: 52%;
+    left: 25.7%;
+  }
+  #jalan .locDot {
+    top: 24.5%;
+    left: 15.5%;
+  }
+  #kaki .locDot {
+    top: 72.5%;
+    left: 31%;
+  }
+  #kolk .locDot {
+    top: 54.5%;
+    left: 45.5%;
+  }
+  #mumbai .locDot {
+    top: 65.5%;
+    left: 9%;
+  }
+  #nagpur .locDot {
+    top: 59%;
+    left: 24%;
+  }
+  #nellore .locDot {
+    top: 79.6%;
+    left: 26.2%;
+  }
+  #tirupathi .locDot {
+    top: 82.5%;
+    left: 24.5%;
+  }
+  #erode .locDot {
+    top: 90%;
+    left: 21%;
+  }
+  #pune .locDot {
+    top: 67.5%;
+    left: 11.2%;
+  }
+  #rajmun .locDot {
+    top: 72%;
+    left: 29.8%;
+  }
+  #surat .locDot {
+    top: 59%;
+    left: 8.9%;
+  }
+  #thane .locDot {
+    top: 65%;
+    left: 11.5%;
+  }
+  #vellore .locDot {
+    top: 85%;
+    left: 24%;
+  }
+  #vijay .locDot {
+    top: 73.5%;
+    left: 27.5%;
+  }
+  #vizag .locDot {
+    top: 69.5%;
+    left: 34%;
+  }
+  #pondy .locDot {
+    top: 88%;
+    left: 25.4%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .locationBanner {
+    height: 550px;
+    margin-top: 100px;
+  }
+  .locationBoxImg {
+    max-width: 130%;
+  }
+  .locInfoBox {
+    top: 5%;
+  }
+  .locationBanner {
+    height: 592px;
+  }
+  .locationDotBox {
+    left: 1.8%;
+  }
+  #ahm .locDot {
+    top: 52.8%;
+    left: 8.2%;
+  }
+  #bang .locDot {
+    top: 84.7%;
+    left: 20.5%;
+  }
+  #chen .locDot {
+    top: 84.5%;
+    left: 26.4%;
+  }
+  #trivandrum .locDot {
+    top: 98.6%;
+    left: 19%;
+  }
+  #nagercoil .locDot {
+    top: 100%;
+    left: 20%;
+  }
+  #odisha .locDot {
+    top: 59.5%;
+    left: 38.5%;
+  }
+  #thiruvannamalai .locDot {
+    top: 87%;
+    left: 24%;
+  }
+  #perintalmanna .locDot {
+    top: 91%;
+    left: 17.5%;
+  }
+  #calicut .locDot {
+    top: 90%;
+    left: 16.5%;
+  }
+  #thiruvella .locDot {
+    top: 96%;
+    left: 18%;
+  }
+  #hosur .locDot {
+    top: 85.8%;
+    left: 20.8%;
+  }
+  #mysore .locDot {
+    top: 87%;
+    left: 18.5%;
+  }
+  #kanchipuram .locDot {
+    top: 85%;
+    left: 25.5%;
+  }
+  #punjab .locDot {
+    top: 26%;
+    left: 14.5%;
+  }
+  #jaipur .locDot {
+    top: 40%;
+    left: 15.5%;
+  }
+  #chattisgarh .locDot {
+    top: 58.5%;
+    left: 31%;
+  }
+  #thissur .locDot {
+    top: 92.3%;
+    left: 17.1%;
+  }
+  #pallakad .locDot {
+    top: 92%;
+    left: 18.7%;
+  }
+  #kochi .locDot {
+    top: 94%;
+    left: 17.5%;
+  }
+  #coimb .locDot {
+    top: 91%;
+    left: 19.5%;
+  }
+  #salem .locDot {
+    top: 89%;
+    left: 22%;
+  }
+  #delhi .locDot {
+    top: 33%;
+    left: 19%;
+  }
+  #guntur .locDot {
+    top: 74%;
+    left: 27%;
+  }
+  #guwah .locDot {
+    top: 42%;
+    left: 54%;
+  }
+  #madurai .locDot {
+    top: 94.5%;
+    left: 22%;
+  }
+  #trichy .locDot {
+    top: 91.5%;
+    left: 23%;
+  }
+  #karur .locDot {
+    top: 91%;
+    left: 21.5%;
+  }
+  #kadapa .locDot {
+    top: 79.5%;
+    left: 23.5%;
+  }
+  #mangalore .locDot {
+    top: 85.3%;
+    left: 14.3%;
+  }
+  #hyd .locDot {
+    top: 71%;
+    left: 22.5%;
+  }
+  #indore .locDot {
+    top: 51%;
+    left: 16.5%;
+  }
+  #jabal .locDot {
+    top: 52%;
+    left: 25.7%;
+  }
+  #jalan .locDot {
+    top: 24.5%;
+    left: 15.5%;
+  }
+  #kaki .locDot {
+    top: 72%;
+    left: 32%;
+  }
+  #kolk .locDot {
+    top: 54.5%;
+    left: 46.5%;
+  }
+  #mumbai .locDot {
+    top: 65.5%;
+    left: 9%;
+  }
+  #nagpur .locDot {
+    top: 59%;
+    left: 24%;
+  }
+  #nellore .locDot {
+    top: 79.6%;
+    left: 26.2%;
+  }
+  #tirupathi .locDot {
+    top: 82.5%;
+    left: 24.5%;
+  }
+  #erode .locDot {
+    top: 90%;
+    left: 21%;
+  }
+  #pune .locDot {
+    top: 67.5%;
+    left: 11.2%;
+  }
+  #rajmun .locDot {
+    top: 72%;
+    left: 30.8%;
+  }
+  #surat .locDot {
+    top: 59%;
+    left: 8.9%;
+  }
+  #thane .locDot {
+    top: 65%;
+    left: 11.5%;
+  }
+  #vellore .locDot {
+    top: 85%;
+    left: 24%;
+  }
+  #vijay .locDot {
+    top: 73.5%;
+    left: 27.5%;
+  }
+  #vizag .locDot {
+    top: 69.5%;
+    left: 34%;
+  }
+  #pondy .locDot {
+    top: 88%;
+    left: 25.4%;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .locationBanner {
+    height: 530px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .locationBoxImg {
+    max-width: 150%;
+  }
+  .locationDotLayer,
+  .locationImgLayer {
+    display: none;
+  }
+  .totalStoreCountBox img {
+    max-width: 65px;
+  }
+  .totalCountTagline {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .locationBox {
+    width: 47%;
+  }
+  .locationBox:nth-of-type(3n-1) {
+    top: 0px;
+  }
+  .locationBoxContent {
+    height: 90%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .locationBanner {
+    height: 415px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .locationBox {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .totalCount {
+    font-size: 80px;
+  }
+  .locationMapContainer {
+    width: 60%;
+  }
+  .totalStoreCountBox {
+    bottom: 10%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .locationBox:hover .locationBoxContent {
+    height: 90%;
+  }
+}
+.galleryBannerContainer {
+  position: relative;
+  height: 550px;
+  background: url("../img/gallery/naturally-high-banner.jpg") center top / cover
+    no-repeat;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.galleryBannerContainer .aboutBannerContentBox {
+  position: absolute;
+  left: 5%;
+  top: 30%;
+}
+.galleryBanner {
+  position: relative;
+  z-index: -1;
+}
+.galleryBannerContentBox {
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  top: 35%;
+}
+.galleryTopLine {
+  position: absolute;
+  left: calc(50% - 1px);
+  top: 30%;
+}
+.galleryTopLine::after {
+  content: "";
+  position: absolute;
+  height: 250px;
+  width: 1px;
+  left: 50%;
+  z-index: 20;
+  top: 120px;
+  background: rgb(80, 80, 80);
+}
+.galleryFilterContainer {
+  justify-content: center;
+  width: 25%;
+  height: 150px;
+  text-align: center;
+  margin: 0px auto;
+}
+.galleryFilterContainer a:hover {
+  text-decoration: underline;
+  color: rgb(255, 204, 0);
+}
+.galleryFilter {
+  margin: 0px 10px;
+  color: rgb(44, 44, 44);
+}
+.galleryKiosk {
+  padding: 0px 5px;
+}
+.galleryFilterContainer p {
+  margin-top: 10px;
+}
+.followUsContainer,
+.watchUsContainer {
+  position: relative;
+  margin: 0px 10% 2%;
+}
+.watchUsContainer {
+  margin-top: 5px;
+}
+.galleryContentBox {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 2%;
+}
+.galleryContentBox span {
+  position: relative;
+  top: -15px;
+}
+.galleryContentTitle {
+  font-size: 32px;
+}
+.galleryList {
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.galleryBox {
+  width: 23%;
+  margin-bottom: 65px;
+  margin-right: 1%;
+  margin-left: 1%;
+}
+.videoBox {
+  width: 100%;
+}
+.galleryName {
+  position: relative;
+  font-size: 16px;
+  color: rgb(33, 37, 41);
+}
+#galleryWindow2,
+#galleryWindow3,
+#galleryWindow4 {
+  display: none;
+}
+.galleryName:hover {
+  color: rgb(255, 211, 35);
+}
+a.galleryBox {
+  text-decoration: none;
+}
+a.galleryFilter:hover {
+  text-decoration: none;
+}
+.galleryBox img {
+  width: 100%;
+}
+img.galleryTrending {
+  max-width: 95%;
+}
+@media only screen and (min-width: 1920px) {
+  img.galleryTrending {
+    max-width: 100%;
+  }
+  .galleryBannerContainer {
+    height: 115vh;
+  }
+}
+@media only screen and (min-width: 2160px) {
+  .galleryBannerContainer {
+    height: 125vh;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .watchUsContainer {
+    margin-top: 2%;
+  }
+  .galleryBox {
+    width: 250px;
+  }
+  .galleryBannerContainer {
+    height: 140vh;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  img.galleryTrending {
+    max-width: 85%;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  img.galleryTrending {
+    max-width: 70%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .poolImgTxtBox {
+    left: 9%;
+    bottom: -17px;
+  }
+  .bottleSnakeContainer {
+    width: 200px;
+    height: 100px;
+  }
+  img.galleryTrending {
+    max-width: 72%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .bottleSnakeContainer {
+    width: 150px;
+  }
+  .galleryBox {
+    width: 30%;
+  }
+  .poolImgTxt {
+    font-size: 16px;
+  }
+  .poolImgTxt2 {
+    font-size: 20px;
+  }
+  .poolImgTxtBox {
+    left: 8%;
+    bottom: -15px;
+  }
+  .galleryList {
+    justify-content: space-around;
+  }
+  .galleryBannerContentBox {
+    width: 40%;
+  }
+  .galleryFilterContainer {
+    width: 45%;
+  }
+  #swipebox-close {
+    top: 10%;
+  }
+  img.galleryTrending {
+    max-width: 80%;
+  }
+}
+@media only screen and (max-width: 651px) {
+  .galleryBannerContainer {
+    margin-top: 100px;
+  }
+  .bottleSnakeContainer {
+    width: 130px;
+  }
+  .galleryBox {
+    width: 27%;
+    margin-bottom: 10%;
+  }
+  .poolImgTxt {
+    font-size: 14px;
+  }
+  .poolImgTxt2 {
+    font-size: 18px;
+  }
+  .galleryBannerContainer {
+    bottom: 70px;
+  }
+  img.galleryTrending {
+    max-width: 74%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .galleryBox {
+    width: 42%;
+  }
+  .bottleSnakeContainer {
+    width: 100px;
+    bottom: 0px;
+  }
+  .poolImgTxt {
+    font-size: 12px;
+  }
+  .poolImgTxt2 {
+    font-size: 16px;
+  }
+  .poolImgTxtBox {
+    left: 6%;
+    bottom: -20px;
+  }
+  .galleryTopLine {
+    display: none;
+  }
+  .galleryBannerContainer {
+    bottom: 50px;
+  }
+  .galleryTrending {
+    max-width: 56px;
+  }
+  img.galleryTrending {
+    max-width: 70%;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .galleryBox {
+    width: 100%;
+  }
+  .galleryBannerContainer {
+    bottom: 0px;
+    margin-top: 105px;
+  }
+  img.galleryTrending {
+    max-width: 75%;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .galleryList {
+    justify-content: center;
+    margin: 20px 0px;
+  }
+  .galleryBox {
+    width: 90%;
+  }
+  .galleryFilterContainer {
+    justify-content: space-evenly;
+    width: 30%;
+    height: 125px;
+  }
+  .galleryBannerContainer {
+    bottom: 0px;
+  }
+  img.galleryTrending {
+    max-width: 74%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .galleryFilterContainer {
+    width: 30%;
+    height: 125px;
+  }
+  .galleryBannerContainer {
+    bottom: 0px;
+  }
+}
+.featuredBlogContianer {
+  position: relative;
+  height: 400px;
+  justify-content: center;
+  flex-direction: column;
+  background: url("../img/blog/blog-banner.jpg") left center / cover no-repeat;
+  margin: 100px 0px 0px;
+}
+.featuredBlogTitle {
+  font-size: 30px;
+}
+.featuredBlogLink {
+  font-size: 15px;
+  text-decoration: underline;
+}
+.featuredBlogLink,
+.featuredBlogTitle {
+  position: relative;
+  align-self: center;
+  text-transform: uppercase;
+}
+.newsBlogCategoryBox {
+  justify-content: center;
+  margin: 30px 0px 50px;
+}
+.newsBlogCategoryBox a {
+  margin: 0px 10px;
+}
+.blogListContainer {
+  padding-top: 5%;
+}
+.blogBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  margin: 0px 0px 25px;
+  color: rgb(44, 44, 44);
+  border: 1px solid rgb(0, 0, 0);
+}
+.blogBox:hover {
+  color: rgb(44, 44, 44);
+  text-decoration: none;
+}
+.blogImg {
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.blogQuoteBox {
+  position: relative;
+  background: rgb(227, 174, 106);
+  padding: 5%;
+  color: rgb(255, 255, 255);
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.blogQuoteDown,
+.blogQuoteUp {
+  max-width: 20px;
+  display: inline-block;
+  position: relative;
+}
+.blogQuoteUp {
+  bottom: 5px;
+  right: 10px;
+}
+.blogQuoteDown {
+  left: 10px;
+  bottom: 4px;
+}
+.blogQuote {
+  font-size: 23px;
+}
+.blogHeader {
+  margin: 0px 8px;
+}
+.blogType4 .blogHeader {
+  margin: 5% 5% 10%;
+  line-height: 1.3;
+}
+.blogHeader p {
+  font-size: 14px;
+  font-weight: 600;
+}
+.blogAuthorBox {
+  justify-content: center;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.author,
+.blogAuthorImg,
+.blogTimeImg,
+.time {
+  margin: 0px 2px;
+}
+.blogTimeImg {
+  margin-left: 8px;
+}
+.author,
+.time {
+  font-size: 14px;
+}
+.blogDesc {
+  margin: 5px 8px;
+}
+@media only screen and (min-width: 1920px) {
+  .blogBox {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 2160px) {
+  .blogBox {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .blogBox {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .blogAuthorBox span {
+    padding-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .featuredBlogContianer {
+    height: 300px;
+  }
+  .blogBox {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .featuredBlogLink,
+  .featuredBlogTitle {
+    width: 100%;
+    left: 0px;
+    padding-left: 10%;
+  }
+  .featuredBlogContianer {
+    height: 250px;
+  }
+  .blogBox {
+    width: 100%;
+  }
+  .blogListContainer {
+    justify-content: center;
+  }
+}
+.blogTitleContianer {
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 9% 0px 2%;
+}
+.blogInnerImg {
+  height: 360px;
+  padding: 0px 8%;
+  position: relative;
+  background: url("../img/blog/blog-banner.jpg") center center / cover no-repeat;
+}
+#blogDmBlog {
+  background: url("../img/blog/Drunken-Monkey-gets-a-Blog-0102-final.jpg")
+    center center / cover no-repeat;
+}
+#blogNaturallyHigh {
+  background: url("../img/blog/naturally-high-0101-final.jpg") center center /
+    cover no-repeat;
+}
+#blogSmoothieVs {
+  background: url("../img/blog/Smoothies-versus-Milkshakes-0102-final.jpg")
+    center center / cover no-repeat;
+}
+#blog5ways {
+  background: url("../img/blog/Drunken-Monkey-gets-a-Blog-0102-final.jpg")
+    center center / cover no-repeat;
+}
+#blogDetox {
+  background: url("../img/blog/detox-blog.jpg") center center / cover no-repeat;
+}
+#blogHydra {
+  background: url("../img/blog/hydrators-the-chill-mantra.jpg") center center /
+    cover no-repeat;
+}
+#blogPFB {
+  background: url("../img/blog/pfb-banner.jpg") center center / cover no-repeat;
+}
+#blogAlwaysNature {
+  background: url("../img/blog/Banner1.jpg") center center / cover no-repeat;
+}
+#blogCheatDay {
+  background: url("../img/blog/Cheat-day-in-a-good-way.JPG") center center /
+    cover no-repeat;
+}
+#blogFitnessHealth {
+  background: url("../img/blog/fitness-happiness-banner.jpg") center center /
+    cover no-repeat;
+}
+#blogSmoothieCulture {
+  background: url("../img/blog/detox-blog.jpg") center center / cover no-repeat;
+}
+#blogAvocado {
+  background: url("../img/blog/b.jpg") center center / cover no-repeat;
+}
+.blogSocialLinks {
+  position: absolute;
+  right: 6%;
+  bottom: 2%;
+}
+.socialLinkBox {
+  align-self: flex-end;
+  margin: 0px 5px;
+}
+.blogSocialLinks img {
+  max-width: 25px;
+}
+.blogContentBox {
+  margin: 70px 0px 40px;
+  padding: 0px 5%;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.blogContentBox a,
+.blogContentBox p {
+  font-size: 17px;
+}
+.blogContent {
+  position: relative;
+  width: 65%;
+}
+.blogContent strong {
+  font-size: 18px;
+}
+.relatedBlogContainer {
+  position: relative;
+  width: 28%;
+}
+.relatedBlogContainer a {
+  color: rgb(44, 44, 44);
+}
+.relatedBlogContainer a:hover {
+  color: rgb(44, 44, 44);
+  text-decoration: none;
+}
+.relatedBlogImg {
+  height: 200px;
+  overflow: hidden;
+}
+.relatedBlogText {
+  margin: 5px 0px 25px;
+}
+.offerBannerContainer {
+  position: relative;
+  justify-content: flex-start;
+  color: rgb(23, 23, 23);
+  margin: 30px 0px;
+  padding: 0px 5%;
+  height: 350px;
+  background: url("../img/blog/bloggers-banner-final.jpg") left center / cover
+    no-repeat;
+}
+.blogOfferBannerLink {
+  position: absolute;
+  top: 65%;
+  color: rgb(44, 44, 44);
+  font-size: 20px;
+  font-weight: 700;
+  border: 5px dotted rgb(80, 80, 80);
+  border-radius: 40px;
+  padding: 5px 20px;
+  cursor: pointer;
+}
+.blogOfferBannerLink:hover {
+  color: rgb(44, 44, 44);
+}
+.backButton {
+  text-align: center;
+  padding: 30px 0px 50px;
+}
+.backButton a {
+  background: rgb(255, 204, 102);
+  padding: 5px 25px;
+  color: rgb(44, 44, 44);
+}
+.backButton a:hover {
+  color: rgb(44, 44, 44);
+}
+.blogPopupLink {
+  text-decoration: underline;
+  color: rgb(255, 211, 35);
+}
+.blogPopupBody.modal-body p:first-of-type {
+  margin-top: 30px;
+}
+.blogPopupBody.modal-body {
+  padding: 30px 50px;
+  text-align: justify;
+  color: rgb(33, 37, 41);
+}
+@media only screen and (min-width: 1920px) {
+  .offerBannerContainer {
+    height: 37vh;
+  }
+  .relatedBlogImg {
+    height: 300px;
+  }
+  .blogInnerImg {
+    height: 38vh;
+  }
+}
+@media only screen and (min-width: 2160px) {
+  .blogInnerImg {
+    height: 42vh;
+  }
+  .offerBannerContainer {
+    height: 42vh;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .blogInnerImg {
+    height: 50vh;
+  }
+  .offerBannerContainer {
+    height: 50vh;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .offerBannerContainer {
+    height: 300px;
+  }
+  .blogOfferBannerLink {
+    left: 6%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .blogContentBox {
+    flex-direction: column;
+    padding: 0px 8%;
+  }
+  .blogContent {
+    width: 98%;
+  }
+  .relatedBlogContainer {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  .relatedBlogContainer a {
+    width: 31%;
+  }
+  .relatedBlogContainer a:nth-of-type(2) {
+    margin-left: 2%;
+  }
+  .offerBannerContainer {
+    height: 300px;
+    background-size: cover;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .relatedBlogContainer a {
+    width: 47%;
+  }
+  .relatedBlogContainer a:nth-of-type(2) {
+    margin-left: 2%;
+  }
+  .offerBannerContainer {
+    height: 250px;
+    background-size: cover;
+  }
+  .blogOfferBannerLink {
+    left: 13%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .blogTitle {
+    font-size: 30px;
+  }
+}
+.partnerMonkeybanner {
+  position: relative;
+  height: 600px;
+  background: url("../img/partner-with-us/DM-website-partner-with-us.jpg")
+    center bottom / cover no-repeat;
+  z-index: -1;
+  margin-top: 100px;
+}
+.partnerMonkeybannerText {
+  font-size: 32px;
+  position: absolute;
+  bottom: 0px;
+  right: 5%;
+  width: auto;
+  text-transform: uppercase;
+}
+.fran_contact_bg {
+  justify-content: center;
+  margin: 50px 0px;
+}
+.fran_contact_bg form {
+  width: 70%;
+}
+#state_option {
+  color: rgb(44, 44, 44);
+  font-weight: 700;
+}
+@media only screen and (min-width: 1920px) {
+  .partnerMonkeybanner {
+    height: 80vh;
+  }
+}
+@media only screen and (min-width: 2160px) {
+  .partnerMonkeybanner {
+    height: 90vh;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .partnerMonkeybanner {
+    height: 100vh;
+  }
+}
+.feedMeBackbanner {
+  position: relative;
+  height: 550px;
+  background: url("../img/feed-me-back/feed-me-back-banner.jpg") right center /
+    cover no-repeat;
+  z-index: -1;
+  margin-top: 100px;
+}
+.feedMeBackBannerContent {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  height: 50%;
+  width: 43%;
+  font-size: 26px;
+}
+.feedMeBackBannerContent p {
+  font-size: 18px;
+  width: 70%;
+}
+.contact_form_container {
+  width: 100%;
+  padding: 30px 0px;
+  margin-bottom: 20px;
+}
+.contact_form_container .container {
+  position: relative;
+  width: 70%;
+}
+.contactHeader {
+  font-size: 17px;
+  text-align: center;
+}
+.contact_form {
+  margin-top: 15px;
+}
+.form-control {
+  border-color: rgb(80, 80, 80);
+  border-radius: 0px;
+  color: rgb(44, 44, 44);
+}
+.form-control::placeholder {
+  color: rgb(44, 44, 44);
+  font-weight: 700;
+}
+.git_contact_row {
+  width: 100%;
+  margin-bottom: 2%;
+}
+.halfrow {
+  position: relative;
+  width: 48%;
+  left: 26%;
+}
+.feedBackSubmit {
+  justify-content: center;
+}
+.git_contact_row .submit {
+  padding-left: 0px;
+  margin-right: 1%;
+  width: 19%;
+  align-self: center;
+  float: left;
+  cursor: pointer;
+}
+.git_col_left {
+  width: 49%;
+  margin-right: 1%;
+}
+.git_col_right {
+  width: 49%;
+  margin-left: 1%;
+}
+.formReviewSection {
+  justify-content: space-between;
+  overflow: hidden;
+}
+.formReviewSection {
+  justify-content: space-between;
+  overflow: hidden;
+}
+.radioBtnContainer {
+  text-align: center;
+  justify-content: space-around;
+}
+.radioBtnName {
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+  cursor: pointer;
+}
+.radioBtnName.active {
+  border: 1px solid rgb(80, 80, 80);
+  border-radius: 10px;
+}
+.radioBtnName input {
+  margin-right: 4px;
+  cursor: pointer;
+  opacity: 0;
+}
+.everythingElseContainerTitle,
+.reviewContainerTitle {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+.ambienceRating,
+.qualityRating,
+.serviceRating {
+  margin-bottom: 0px;
+}
+.reviewName {
+  width: 110px;
+}
+.selectBoxName {
+  width: 270px;
+}
+.selectBox {
+  width: 90%;
+  margin: 0px 0px 0px 1%;
+}
+#orderDiscName {
+  width: 78%;
+}
+.rating {
+  display: inline-block;
+  position: relative;
+  height: 30px;
+  line-height: 20px;
+  font-size: 30px;
+}
+.rating label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  cursor: pointer;
+}
+.rating label:last-child {
+  position: static;
+}
+.rating label:nth-child(1) {
+  z-index: 5;
+}
+.rating label:nth-child(2) {
+  z-index: 4;
+}
+.rating label:nth-child(3) {
+  z-index: 3;
+}
+.rating label:nth-child(4) {
+  z-index: 2;
+}
+.rating label:nth-child(5) {
+  z-index: 1;
+}
+.rating label input {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+}
+.rating label .icon {
+  float: left;
+  color: transparent;
+  font-size: 25px;
+}
+.rating label:last-child .icon {
+  color: rgb(44, 44, 44);
+}
+.rating:hover label:hover input ~ .icon,
+.rating:not(:hover) label input:checked ~ .icon {
+  color: rgb(255, 211, 35);
+}
+.rating label input:focus:not(:checked) ~ .icon:last-child {
+  color: rgb(44, 44, 44);
+  text-shadow: rgb(255, 211, 35) 0px 0px 5px;
+}
+.creativeUploadBtn {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  cursor: pointer;
+}
+.creativeUploadBtn .reviewName {
+  position: relative;
+  width: 80px;
+}
+.creativeBtn {
+  display: inline-block;
+  background: 0px 0px;
+  border: 1px solid rgb(80, 80, 80);
+  white-space: nowrap;
+  font-size: 14px;
+  cursor: pointer;
+  width: 30%;
+}
+.creativeUploadBtn input[type="file"] {
+  font-size: 10px;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  opacity: 0;
+  padding: 10px 0px;
+}
+#date,
+#time {
+  border: 1px solid rgb(80, 80, 80);
+  padding: 5px 10px;
+}
+textarea {
+  resize: none;
+}
+.everythingElseContainer textarea {
+  resize: none;
+  height: 150px;
+  width: 100%;
+  border: 1px solid rgb(80, 80, 80);
+  background: 0px 0px;
+}
+.joinMonkeyContainer {
+  position: relative;
+  margin: 10px 0px;
+  text-align: center;
+  font-size: 16px;
+}
+.collaborate,
+.join {
+  position: relative;
+  margin: 20px 0px;
+}
+.collaborate a,
+.join a {
+  color: rgb(44, 44, 44);
+  padding-left: 5px;
+}
+.collaborate a:hover,
+.join a:hover {
+  color: rgb(44, 44, 44);
+  text-decoration: none;
+}
+.git_mail_to {
+  width: 79%;
+  float: right;
+  border: 1px solid rgb(80, 80, 80);
+  padding: 5px;
+}
+.git_mail_to a {
+  color: rgb(44, 44, 44);
+}
+.git_mail_to a:hover {
+  color: rgb(44, 44, 44);
+  text-decoration: none;
+}
+.git_zomato_swiggy {
+  float: left;
+  width: 100%;
+  text-align: center;
+  padding: 30px 0px;
+}
+.git_zomato_swiggy img {
+  max-width: 160px;
+  display: inline-block;
+  margin: 1%;
+}
+.halfrow .form-control.git_contact_us::placeholder {
+  font-size: 12px;
+  color: rgb(33, 37, 41);
+}
+.form-control.git_contact_us.greyText::placeholder {
+  color: rgb(121, 121, 120);
+}
+.recaptchaBox {
+  position: relative;
+  left: 35%;
+}
+@media only screen and (min-width: 2160px) {
+  .feedMeBackbanner {
+    height: 60vh;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .feedMeBackbanner {
+    height: 70vh;
+  }
+}
+@media only screen and (max-width: 1147px) {
+  .git_content {
+    width: 80%;
+    left: 10%;
+  }
+  .git_zomato_swiggy a {
+    width: 23%;
+    position: relative;
+  }
+  .git_zomato_swiggy img {
+    max-width: 16%;
+  }
+  .recaptchaBox {
+    left: 28%;
+  }
+  .everythingElseContainer textarea {
+    width: 98%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .halfrow {
+    width: 80%;
+    left: 10%;
+  }
+  .formReviewSection {
+    flex-wrap: wrap;
+  }
+  .everythingElseContainer,
+  .reviewContainer {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .git_content {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .git_contact_row .submit {
+    padding-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+  }
+  .git_contact_row {
+    flex-wrap: wrap;
+  }
+  .git_col_left {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 1%;
+  }
+  .git_col_right {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 1%;
+  }
+  .git_contact_row .submit {
+    padding-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+  }
+  .git_mail_to {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 2%;
+  }
+  .git_zomato_swiggy {
+    padding: 15px 0px;
+  }
+  .recaptchaBox {
+    left: 20%;
+  }
+}
+@media only screen and (max-width: 451px) {
+  .contact_form_container .container {
+    width: 90%;
+  }
+  .creativeBtn {
+    width: 40%;
+  }
+  select.form-control:not([size]):not([multiple]) {
+    margin-bottom: 3px;
+  }
+  .selectBox {
+    width: 100%;
+  }
+  .joinMonkeyContainer {
+    padding: 0px 5%;
+  }
+  .feedMeBackBannerContent {
+    top: 3%;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+  }
+  .feedMeBackBannerContent p {
+    width: 90%;
+    text-align: center;
+    padding-left: 8%;
+    color: rgb(255, 255, 255);
+  }
+  .recaptchaBox {
+    left: 7%;
+  }
+  .git_mail_to {
+    text-align: center;
+  }
+}
+.fullPage {
+  background: url("../img/fun-page/monkey-full-width.jpg") center center /
+    contain no-repeat;
+  width: 100%;
+  position: relative;
+  top: 23%;
+  height: 72vh;
+  margin-top: 12%;
+}
+.funPageresultContent {
+  color: rgb(186, 186, 191);
+  font-family: "Titillium Web", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  margin-left: 42%;
+  margin-top: 40%;
+}
+.funPageImage {
+  height: 90vh;
+  background: url("../img/fun-page/monkey-full-width.jpg") center center / cover
+    no-repeat;
+  width: 71%;
+  position: absolute;
+  z-index: -1;
+  transition: all 0.2s ease 0s;
+  bottom: 0px;
+  left: 15%;
+  visibility: hidden;
+}
+.funPageResultImage {
+  height: 73vh;
+  background-position: center center;
+  background-size: contain;
+  width: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+  transition: all 0.2s ease 0s;
+  left: 0px;
+  opacity: 0.5;
+  top: 17%;
+}
+.funPageContent {
+  text-align: center;
+  position: relative;
+  z-index: 99;
+  top: 0px;
+}
+.funPageNameSendTo,
+.funPageNameSendTo1,
+.funPageTitle {
+  font-family: "Titillium Web", sans-serif;
+  text-transform: uppercase;
+  font-size: 32px;
+}
+.funPageNameButton {
+  position: relative;
+  background: rgb(255, 255, 255);
+  font-family: "Source Sans Pro", sans-serif;
+  border-color: rgb(80, 80, 80);
+  font-size: 15px;
+  padding: 13px 25px;
+  cursor: pointer;
+  top: 77%;
+}
+.funPageMessage {
+  text-align: center;
+  position: absolute;
+  width: 15%;
+  left: 42.5%;
+  background-color: rgb(255, 192, 0);
+  color: rgb(255, 255, 255);
+}
+.funPageMessageList {
+  list-style: none;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.funPageMessageList li:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(255, 192, 0);
+  transition: all 0.5s ease 0s;
+}
+.funPageNameSendTo1 {
+  font-size: 14px;
+  position: relative;
+  font-weight: 700;
+  top: 42px;
+  text-transform: lowercase;
+}
+.funPageNameSendTopText {
+  top: 0px;
+  font-size: 40px;
+  font-family: "Titillium Web", sans-serif;
+  position: relative;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+.funpagesocialLinks {
+  border-radius: 50%;
+  padding: 15px;
+  max-width: 20%;
+  visibility: hidden;
+  text-align: center;
+  position: relative;
+  left: 44%;
+  top: 16%;
+  border: none;
+}
+.shareButton {
+  position: relative;
+  right: 24%;
+  top: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+.funpagesocialLinks img {
+  border: 2px solid rgb(121, 121, 120);
+  border-radius: 50%;
+  padding: 15px;
+  max-width: 55px;
+}
+.funPageNameSendToURL {
+  top: 0px;
+  font-size: 25px;
+  font-family: "Titillium Web", sans-serif;
+  position: relative;
+  font-weight: 200;
+  margin-top: 9%;
+  cursor: pointer;
+}
+.textHover {
+  cursor: pointer;
+}
+.textHover:hover {
+  color: rgb(255, 192, 0);
+  opacity: 5;
+  transition: all 0.5s ease 0s;
+}
+.funPageNextContent {
+  text-align: center;
+  visibility: hidden;
+  position: relative;
+}
+.submitGetUrl {
+  font-size: 15px;
+  padding: 13px 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  left: 46%;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+  width: 7%;
+  background: 0px 0px;
+  font-family: "Source Sans Pro", sans-serif;
+  border-color: rgb(80, 80, 80);
+  border-radius: 0px;
+  margin-top: 10%;
+}
+.funpagresultButton {
+  text-align: center;
+}
+.submitGetUrl:hover {
+  background: rgb(255, 255, 255);
+}
+.funPageUrlContent {
+  text-align: center;
+  visibility: hidden;
+}
+.funPageTextBox-no-border {
+  font-size: 100px;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 6.1px;
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.funPageurlText {
+  font-size: 22px;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+}
+.funPageImage1 {
+  background-size: cover;
+  height: 81vh;
+  bottom: 15%;
+}
+.funPageTextBox-no-border:hover {
+  opacity: 1;
+  box-shadow: none;
+}
+.funPageNextContent input:focus,
+.funPageNextContent text:focus {
+  outline: 0px;
+}
+.funPageResultContent {
+  font-size: 5rem;
+  position: relative;
+  right: 20%;
+  bottom: 289px;
+}
+.funPageName {
+  font-size: 5rem;
+  margin-top: 6%;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.funPageNameurawesome {
+  font-size: 5rem;
+}
+.funpagehugs {
+  font-size: 5rem;
+  position: relative;
+}
+.funpagecheers {
+  font-size: 5rem;
+}
+.funpageyouass {
+  font-size: 5rem;
+}
+.funpagewannahangout {
+  font-size: 5rem;
+}
+.funpageyoumonkey {
+  font-size: 5rem;
+}
+.funpageResult {
+  position: relative;
+  z-index: 500;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+}
+.funpageResult .message {
+  font-weight: 700;
+  line-height: 72px;
+  overflow: hidden;
+  margin-bottom: 18%;
+  padding: 0px 10%;
+  text-transform: uppercase;
+  top: 70px;
+  position: relative;
+}
+.funPageNameurawesome {
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  position: relative;
+  right: 14%;
+  top: 15px;
+}
+.funpagehugs {
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  position: relative;
+  right: 21%;
+  top: 25px;
+}
+.funpagecheers {
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  position: relative;
+  right: 21%;
+  top: 25px;
+}
+.funpageyouass {
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  position: relative;
+  right: 21%;
+  top: 25px;
+}
+.funpagewannahangout {
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  position: relative;
+  right: 12%;
+  top: 20px;
+}
+.funpageyoumonkey {
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  position: relative;
+  right: 18%;
+  top: 22px;
+}
+@media only screen and (min-width: 1536px) {
+  .funPageMessage {
+    top: 7%;
+  }
+  .funPageResultImage {
+    top: 16%;
+    height: 61vh;
+  }
+  .funPageresultContent {
+    top: -3%;
+    right: 3%;
+  }
+  .fullPage {
+    margin-top: 13%;
+  }
+  .funpageResult {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+  .funpagresultButton {
+    position: relative;
+    right: 0px;
+    top: -18px;
+    text-align: center;
+    margin-bottom: 3%;
+  }
+}
+@media only screen and (min-width: 1900px) {
+  .funPageName {
+    margin-top: 8%;
+  }
+  .fullPage {
+    height: 70vh;
+  }
+  .submitGetUrl {
+    left: 46%;
+    top: 200px;
+  }
+  .funPageMessage {
+    top: 6%;
+  }
+  .funpagesocialLinks {
+    left: 46%;
+  }
+  .shareButton {
+    right: 30%;
+  }
+  .funPageNameurawesome {
+    right: 7%;
+    top: 30px;
+  }
+  .funpagewannahangout {
+    right: 7%;
+  }
+  .funpageyoumonkey {
+    right: 12%;
+  }
+  .funpagehugs {
+    right: 17%;
+  }
+  .funpagecheers {
+    right: 16%;
+  }
+  .funpageyouass {
+    right: 17%;
+  }
+  .funpageResult .message {
+    top: 200px;
+  }
+}
+@media only screen and (min-width: 2160px) {
+  .fullPage {
+    height: 70vh;
+  }
+  .funPageNameurawesome {
+    right: 12%;
+  }
+  .funPageName {
+    right: 8%;
+  }
+  .funpagehugs {
+    right: 19%;
+  }
+  .funpagecheers {
+    right: 19%;
+  }
+  .funpageyouass {
+    right: 19%;
+  }
+  .funpageyoumonkey {
+    right: 12%;
+  }
+  .funpageResult .message {
+    top: 155px;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .fullPage {
+    height: 70vh;
+  }
+  .funPageNameurawesome {
+    right: 16%;
+  }
+  .funpagehugs {
+    right: 25%;
+  }
+  .funPageName {
+    margin-top: 5%;
+  }
+  .funpagehugs {
+    right: 24%;
+  }
+  .funpagecheers {
+    right: 23%;
+  }
+  .funpageyouass {
+    right: 23%;
+  }
+  .funpagewannahangout {
+    right: 15%;
+  }
+  .funpageyoumonkey {
+    right: 18%;
+  }
+  .funpageResult .message {
+    top: 181px;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .fullPage {
+    bottom: 4px;
+    margin-bottom: 2%;
+  }
+  .funPageResultImage {
+    top: 14%;
+    height: 60vh;
+  }
+  .funPageMessage {
+    top: 8%;
+  }
+  .fullPageFunPageResult {
+    margin-top: 5%;
+  }
+  .funPageNameurawesome {
+    right: 2%;
+    top: 30px;
+  }
+  .funpageyoumonkey {
+    right: 8%;
+    top: 22px;
+  }
+  .funpagewannahangout {
+    right: 0px;
+  }
+  .funpagehugs {
+    right: 13%;
+  }
+  .funpagecheers {
+    right: 12%;
+  }
+  .funpageyouass {
+    right: 12%;
+  }
+  .homeFindMonkeyContainer {
+    height: 73vh;
+  }
+}
+@media only screen and (max-width: 1366px) {
+  .fullPage {
+    bottom: 4px;
+    margin-bottom: 0px;
+  }
+  .funPageNameurawesome {
+    right: 13%;
+    top: -14px;
+  }
+  .funPageName {
+    margin-top: 1%;
+  }
+  .funpagewannahangout {
+    right: 12%;
+    top: -15px;
+  }
+  .funpagehugs {
+    right: 22%;
+    top: 0px;
+  }
+  .funpagecheers {
+    right: 21%;
+    top: 0px;
+  }
+  .funpageyouass {
+    right: 21%;
+    top: 0px;
+  }
+  .funpageyoumonkey {
+    right: 16.5%;
+    top: -14px;
+  }
+  .homeFindMonkeyContainer {
+    height: 616px;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .funPageResultImage {
+    top: 15%;
+    height: 61vh;
+  }
+  .homeFindMonkeyContainer {
+    height: 586px;
+  }
+  .fullPage {
+    background-size: cover;
+    top: 31px;
+    height: 75vh;
+    margin-top: 12%;
+    margin-bottom: 6%;
+  }
+  .funPageMessage {
+    top: 8%;
+    width: 18%;
+    left: 41%;
+  }
+  .submitGetUrl {
+    left: 46%;
+  }
+  .funpagesocialLinks {
+    left: 42%;
+  }
+  .funPageImage {
+    left: 14%;
+  }
+  .fullPageFunPageResult {
+    margin-bottom: -1%;
+  }
+  .funPageName {
+    margin-top: 15%;
+  }
+  .fullPageFunPageResult {
+    margin-top: 0px;
+  }
+  .funpagewannahangout {
+    right: 2%;
+  }
+  .funPageNameurawesome {
+    right: 3%;
+  }
+  .funpagehugs {
+    right: 14%;
+  }
+  .funpagecheers {
+    right: 13%;
+  }
+  .funpageyouass {
+    right: 13%;
+  }
+  .funpageyoumonkey {
+    right: 7.5%;
+  }
+  .funpageResult .message {
+    top: 163px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .funVideo {
+    margin-top: 5%;
+  }
+  .homeFindMonkeyContainer {
+    height: 68vh;
+  }
+  .fullPage {
+    margin-bottom: 9%;
+    margin-top: 15%;
+    height: 70vh;
+  }
+  .funPageImage {
+    background-size: cover;
+    height: 72vh;
+    bottom: 14%;
+    left: 3%;
+    width: 97%;
+  }
+  .funPageMessage {
+    width: 23%;
+    left: 38.5%;
+  }
+  .submitGetUrl {
+    padding: 13px 10px;
+  }
+  .funPageresultContent {
+    top: 55%;
+    right: 24%;
+    font-size: 75px;
+  }
+  .funPageNameButton {
+    top: 101px;
+  }
+  .funPageNameurawesome {
+    bottom: 183px;
+  }
+  .funpagresultButton {
+    right: 0px;
+    top: -120px;
+    position: relative;
+  }
+  .funPageResultImage {
+    top: 17%;
+  }
+  .funPageName {
+    margin-top: 20%;
+  }
+  .funpageyoumonkey {
+    right: -1.5%;
+  }
+  .funPageNameurawesome {
+    right: -7%;
+  }
+  .funpagehugs {
+    right: 7%;
+  }
+  .funpagecheers {
+    right: 6%;
+  }
+  .funpageyouass {
+    right: 6%;
+  }
+  .funpagewannahangout {
+    right: -9%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .fullPage {
+    height: 62vh;
+    margin-top: 35%;
+    margin-bottom: 17%;
+  }
+  .funPageImage {
+    height: 72vh;
+    bottom: 12%;
+    left: 8%;
+    width: 90%;
+  }
+  .submitGetUrl {
+    padding: 7px;
+  }
+  .funPageMessage {
+    width: 31%;
+    left: 35.5%;
+    top: 12%;
+  }
+  .footer {
+    padding: 1%;
+  }
+  .funpagesocialLinks {
+    left: 39%;
+  }
+  .shareButton {
+    right: -4%;
+  }
+  .funPageResultImage {
+    height: 75vh;
+    top: 0px;
+    width: 100%;
+  }
+  .funPageresultContent {
+    top: 35%;
+  }
+  .funPageNameButton {
+    left: -49px;
+    top: 39px;
+  }
+  .funPageName {
+    margin-top: 25%;
+  }
+  .funPageresultContent {
+    font-size: 15px;
+    top: 59%;
+  }
+  .funpagresultButton {
+    right: -5%;
+    top: 5px;
+    margin-bottom: 28%;
+  }
+  .funpageResult .message {
+    top: 105px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .funPageMessage {
+    left: 31.5%;
+    width: 37%;
+  }
+  .submitGetUrl {
+    padding: 7px 6px;
+    font-size: 12px;
+  }
+  .funPageNameButton {
+    top: 117px;
+  }
+  .funPageresultContent {
+    font-size: 15px;
+    top: 41%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .funPageNameSendTopText {
+    font-size: 30px;
+  }
+  .fullPage {
+    height: 52vh;
+    margin-top: 35%;
+  }
+  .footer {
+    margin-top: 20%;
+  }
+  .footerLogoBox img {
+    max-width: 148px;
+  }
+  .funPageNameSendTo,
+  .funPageNameSendTo1,
+  .funPageTitle {
+    font-size: 20px;
+  }
+  .funPageImage {
+    height: 48vh;
+    bottom: 2%;
+  }
+  .funPageMessage {
+    width: 47%;
+    left: 25.5%;
+    top: 18%;
+  }
+  .funPageurlText {
+    font-size: 26px;
+  }
+  .funPageresultContent {
+    right: 33%;
+    font-size: 18px;
+    top: 82%;
+  }
+  .funPageTextBox-no-border {
+    top: 37px;
+    font-size: 60px;
+  }
+  .funPageResultImage {
+    top: 17%;
+    width: 100%;
+    height: 42vh;
+    background-size: cover;
+  }
+  .submitGetUrl {
+    padding: 10px 16px;
+    width: 20%;
+    margin-top: 12%;
+    margin-left: -5%;
+  }
+  .funPageNameSendTo1 {
+    font-size: 14px;
+  }
+  .funPageNameSendToURL {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .funpagesocialLinks {
+    left: 35%;
+    max-width: 47%;
+  }
+  .funPageMessageList {
+    font-size: 16px;
+  }
+  .shareButton {
+    right: 16%;
+  }
+  .funPageName {
+    font-size: 3rem;
+    margin-top: 38%;
+  }
+  .funpagresultButton {
+    right: -10%;
+    top: -110px;
+  }
+  .funPageNameButton {
+    top: 117px;
+    left: -60px;
+  }
+  .funPageresultContent {
+    font-size: 15px;
+    top: 56%;
+  }
+  .funPageNameurawesome,
+  .funpagecheers,
+  .funpagehugs,
+  .funpagewannahangout,
+  .funpageyouass,
+  .funpageyoumonkey {
+    font-size: 3rem;
+    margin-top: 2%;
+  }
+}
+@media only screen and (max-width: 451px) {
+  .funPageNameurawesome {
+    font-size: 3rem;
+  }
+  .funpagehugs {
+    font-size: 3rem;
+  }
+  .funpagecheers {
+    font-size: 3rem;
+  }
+  .funpageyouass {
+    font-size: 3rem;
+  }
+  .funpagewannahangout {
+    font-size: 3rem;
+  }
+  .funpageyoumonkey {
+    font-size: 3rem;
+  }
+  .funpagresultButton {
+    right: -14%;
+    top: -100px;
+  }
+  .funPageName {
+    margin-top: 68%;
+    font-size: 2.5rem;
+  }
+  .funpageResult .message {
+    margin-bottom: 0px;
+  }
+  .submitGetUrl {
+    margin-top: 30%;
+  }
+  .fullPageFunPageResult {
+    margin-bottom: 0px;
+  }
+  .fullPage {
+    margin-bottom: 30%;
+  }
+  .funPageResultImage {
+    top: 20%;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .funpagesocialLinks {
+    left: 31%;
+    max-width: 52%;
+  }
+  .funPageNameSendToURL {
+    font-size: 14px;
+  }
+  .fullPage {
+    height: 39vh;
+    margin-top: 27%;
+    top: 102px;
+  }
+  .funPageImage {
+    height: 56vh;
+  }
+  .footer {
+    margin-top: 10%;
+  }
+  .funPageMessage {
+    width: 43%;
+    left: 28.5%;
+    top: 8%;
+  }
+  .funPageresultContent {
+    font-size: 15px;
+    top: 52%;
+  }
+  .funPageResultImage {
+    top: 22%;
+    height: 51vh;
+  }
+  .funpageResult .message {
+    font-weight: 400;
+    line-height: 44px;
+  }
+  .funpagresultButton {
+    right: -14%;
+  }
+  .funPageNameurawesome,
+  .funpagecheers,
+  .funpagehugs,
+  .funpagewannahangout,
+  .funpageyouass,
+  .funpageyoumonkey {
+    margin-top: 4%;
+    right: 0px;
+    top: 0px;
+  }
+  .funPageName {
+    margin-top: 83%;
+  }
+  .submitGetUrl {
+    margin-top: 35%;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .funPageNameSendToURL {
+    font-size: 12px;
+  }
+  .funPageNameSendTo1 {
+    font-size: 11px;
+  }
+  .fullPage {
+    height: 33vh;
+    margin-top: 33%;
+  }
+  .funPageTitle {
+    font-size: 25px;
+  }
+  .funPageImage {
+    height: 42vh;
+  }
+  .funPageMessage {
+    top: 12%;
+  }
+  .funPageNameSendTo {
+    font-size: 24px;
+  }
+  .funPageTextBox-no-border {
+    font-size: 50px;
+  }
+  .submitGetUrl {
+    left: 39%;
+    margin-left: 0px;
+  }
+  .shareButton {
+    right: 12%;
+  }
+  .funPageNameButton {
+    top: 113px;
+    left: -77px;
+  }
+  .funPageresultContent {
+    top: 50%;
+  }
+  .funPageResultImage {
+    top: 22%;
+    height: 43vh;
+  }
+  .funpagresultButton {
+    right: -20%;
+    margin-bottom: 0px;
+  }
+  .funPageNameurawesome,
+  .funpagecheers,
+  .funpagehugs,
+  .funpagewannahangout,
+  .funpageyouass,
+  .funpageyoumonkey {
+    font-size: 2rem;
+    margin-top: 0px;
+  }
+  .funPageName {
+    margin-top: 78%;
+  }
+  .funpageResult .message {
+    top: 90px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .funpageResult .message {
+    top: 79px;
+  }
+  .funPageResultImage {
+    top: 120px;
+    height: 43vh;
+  }
+}
+@media only screen and (max-width: 351px) {
+  .funPageMessage {
+    width: 64%;
+    left: 18.5%;
+  }
+  .funpagresultButton {
+    right: -22%;
+    top: 25px;
+    margin-bottom: -7%;
+  }
+  .funPageImage {
+    height: 42vh;
+    width: 100%;
+    left: -1%;
+  }
+  .shareButton {
+    right: 30%;
+  }
+  .funPageresultContent {
+    font-size: 15px;
+    top: 41%;
+  }
+  .funPageNameurawesome {
+    font-size: 2rem;
+    bottom: 118px;
+  }
+  .funpagresultButton {
+    right: -22%;
+    top: 45px;
+  }
+  .funPageNameurawesome,
+  .funpagecheers,
+  .funpagehugs,
+  .funpagewannahangout,
+  .funpageyouass,
+  .funpageyoumonkey {
+    font-size: 2rem;
+    margin-top: 15%;
+  }
+  .fullPageFunPageResult {
+    margin-bottom: 40%;
+  }
+  .submitGetUrl {
+    margin-top: 25%;
+  }
+  .fullPage {
+    margin-bottom: 60%;
+  }
+  .funpagesocialLinks {
+    left: 26%;
+    max-width: 100%;
+  }
+  .funPageResultImage {
+    top: 25%;
+  }
+  .funPageName {
+    margin-top: 55%;
+  }
+  .funPageNameButton {
+    top: 0px;
+  }
+}
+@media only screen and (max-width: 325px) {
+  .fullPage {
+    height: 35vh;
+    margin-top: 35%;
+  }
+  .funpagesocialLinks {
+    left: 28%;
+  }
+  .funPageresultContent {
+    font-size: 15px;
+    top: 41%;
+  }
+  .funPageNameButton {
+    top: 117px;
+  }
+  .funpagresultButton {
+    right: -22%;
+    top: -92px;
+  }
+  .funPageName {
+    margin-top: 78%;
+  }
+  .funPageNameurawesome,
+  .funpagecheers,
+  .funpagehugs,
+  .funpagewannahangout,
+  .funpageyouass,
+  .funpageyoumonkey {
+    font-size: 2rem;
+    margin-top: 5%;
+  }
+}
+#newsBanner {
+  background: url("../img/blog/Drunken-Monkey-gets-a-Blog-0102-final.jpg")
+    center center / cover no-repeat;
+}
+.blackFade {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  background: rgb(0, 0, 0);
+  opacity: 0.7;
+}
+.newsBannerTitle {
+  font-size: 32px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  z-index: 99;
+  position: relative;
+  top: 42%;
+}
+.newsPageContianer {
+  position: relative;
+  margin: 5% 0px 0px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.news {
+  position: relative;
+  width: 80%;
+  left: 10%;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.news img {
+  transition: transform 0.2s ease 0s;
+  max-width: 200px;
+}
+.news img:hover {
+  transform: scale(1.1);
+}
+.newsContent {
+  padding: 0px 3% 3%;
+  position: relative;
+  width: 85%;
+}
+.newsReadMore {
+  border: 1px solid rgb(0, 0, 0);
+  padding: 5px 20px;
+}
+.newsReadMore a {
+  color: rgb(0, 0, 0);
+}
+.newsReadMore a:hover {
+  color: rgb(255, 211, 35);
+  text-decoration: none;
+}
+.newsContent h2 {
+  font-size: 24px;
+}
+.easyPaginateNav {
+  margin: 40px 0px 0px;
+  text-align: center;
+}
+.easyPaginateNav a {
+  border: 1px solid rgb(121, 121, 120);
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  margin: 5px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+.easyPaginateNav a.current {
+  background-color: rgb(255, 204, 102);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+.easyPaginateNav a:hover {
+  background-color: rgb(255, 204, 102);
+  color: rgb(255, 255, 255);
+}
+@media only screen and (min-width: 1920px) {
+  .featuredBlogContianer {
+    height: 45vh;
+  }
+}
+@media only screen and (min-width: 2160px) {
+  .featuredBlogContianer {
+    height: 50vh;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .featuredBlogContianer {
+    height: 58vh;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .news img {
+    max-width: 250px;
+  }
+  .news {
+    width: 90%;
+    left: 7%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .news {
+    flex-direction: column;
+    text-align: center;
+  }
+  .newsContent {
+    width: 100%;
+    padding: 3% 3% 2%;
+  }
+  .newsBannerTitle {
+    top: 5%;
+  }
+}
+.qrCode {
+  background: url("../img/footer/footer-logo.png") center center / contain
+    no-repeat;
+  margin-top: 8%;
+}
+.privacySection {
+  margin: 40px 5%;
+}
+.nonePage {
+  height: 100vh;
+  background: url("../img/404-gif.gif") center center / cover no-repeat;
+  width: 100%;
+  margin-top: 100px;
+}
+@media only screen and (min-width: 1920px) {
+  .nonePage {
+    height: 130vh;
+  }
+}
+@media only screen and (min-width: 2160px) {
+  .nonePage {
+    height: 150vh;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .nonePage {
+    height: 175vh;
+  }
+}
+@media only screen and (max-width: 1440px) {
+}
+@media only screen and (max-width: 1024px) {
+  .nonePage {
+    margin-bottom: 0px;
+    margin-top: 10%;
+    height: 70vh;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .nonePage {
+    height: 55vh;
+    margin-top: 15%;
+    margin-bottom: 5%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .nonePage {
+    height: 35vh;
+    margin-bottom: 5%;
+    margin-top: 22%;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .nonePage {
+    height: 30vh;
+    margin-top: 27%;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .nonePage {
+    height: 25vh;
+    margin-top: 30%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .nonePage {
+    height: 22vh;
+    margin-top: 35%;
+  }
+}
+.main-menu-search {
+  height: 100px;
+}
+.overAllMenuSearch {
+  width: 30%;
+  position: relative;
+}
+.clickOnInfo {
+  width: 100%;
+  position: relative;
+}
+.clickOnInfo p {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  text-align: center;
+}
+@media only screen and (max-width: 800px) {
+  .clickOnInfo {
+    width: 100%;
+    top: 0px;
+    right: 0px;
+  }
+  .overAllMenuSearch {
+    width: 45%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .menuBannerContent p {
+    font-size: 17px;
+  }
+  .clickOnInfo {
+    width: 100%;
+    position: relative;
+    top: 0px;
+    right: 0px;
+  }
+  .overAllMenuSearch {
+    width: 45%;
+    position: relative;
+    top: 0px;
+    right: 0%;
+    left: 0px;
+  }
+  .clickOnInfo p {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .menuBanner .img-fluid {
+    max-width: 38%;
+  }
+  .menuBannerContent p {
+    font-size: 17px;
+  }
+  .clickOnInfo {
+    width: 100%;
+    position: relative;
+    top: 0px;
+    right: 0px;
+  }
+  .overAllMenuSearch {
+    width: 45%;
+    position: relative;
+    top: 0px;
+    right: 0%;
+    left: 0px;
+  }
+  .clickOnInfo p {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .menuBanner .img-fluid {
+    max-width: 38%;
+  }
+  .menuBannerContent p {
+    font-size: 17px;
+  }
+  .clickOnInfo {
+    width: 100%;
+    position: relative;
+    top: 0px;
+    right: 0px;
+  }
+  .overAllMenuSearch {
+    width: 45%;
+    position: relative;
+    top: 0px;
+    right: 0%;
+    left: 0px;
+  }
+  .clickOnInfo p {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .menuBanner .img-fluid {
+    max-width: 40%;
+  }
+  .menuBannerContent p {
+    font-size: 17px;
+  }
+  .clickOnInfo {
+    width: 100%;
+    position: relative;
+    top: 0px;
+    right: 0px;
+  }
+  .overAllMenuSearch {
+    width: 45%;
+    position: relative;
+    top: 0px;
+    right: 0%;
+    left: 0px;
+  }
+  .clickOnInfo p {
+    font-size: 12px;
+  }
+}
+.clickInfoInner p {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: 1px;
+  padding: 1.5%;
+  text-align: center;
+}
+.clickInfoInner {
+  width: 25%;
+  text-align: center;
+  position: absolute;
+  left: 38%;
+}
+@media only screen and (max-width: 2560px) {
+  .clickInfoInner {
+    width: 25%;
+    left: 36%;
+    top: 82%;
+  }
+}
+@media only screen and (max-width: 1800px) {
+  .clickInfoInner {
+    width: 30%;
+    left: 36%;
+    top: 82%;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .clickInfoInner {
+    width: 33%;
+    left: 36%;
+    top: 82%;
+  }
+  .clickInfoInner p {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .clickInfoInner {
+    width: 39%;
+    top: 82%;
+    left: 31%;
+  }
+  .clickInfoInner p {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .clickInfoInner {
+    width: 46%;
+    top: 82%;
+    left: 27%;
+  }
+  .clickInfoInner p {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .clickInfoInner {
+    width: 56%;
+    top: 59%;
+    left: 17%;
+  }
+  .clickInfoInner p {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .clickInfoInner {
+    width: 62%;
+    top: 82%;
+    left: 4%;
+  }
+  .clickInfoInner p {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .clickInfoInner {
+    width: 67%;
+    top: 70%;
+    left: 16%;
+  }
+  .clickInfoInner p {
+    font-size: 12px;
+  }
+  .modal-open .modal {
+    top: 60px;
+  }
+  .ResultNoFound,
+  .resultNotFound {
+    left: 0px;
+    margin: 0px auto;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .clickInfoInner {
+    width: 86%;
+    top: 94%;
+    left: 7%;
+  }
+  .clickInfoInner p {
+    font-size: 12px;
+  }
+  .modal-content button {
+    position: relative;
+    left: 47%;
+    font-size: 30px;
+    outline: none;
+  }
+  .dumbell {
+    top: 86%;
+  }
+}
+.menuSearch {
+  border-radius: 30px;
+  width: 100%;
+  text-align: center;
+}
+.modal-content .close {
+  position: relative;
+  left: 48%;
+  font-size: 33px;
+  outline: none;
+}
+.locName {
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .blogTitleContianer {
+    margin: 30% 0px 2%;
+  }
+  .blogInnerImg {
+    height: 180px;
+  }
+  .blogContentBox {
+    margin: 10px 0px;
+  }
+  .relatedBlogImg {
+    height: auto;
+  }
+  .offerBannerContainer {
+    height: 160px;
+  }
+  .blogOfferBannerLink {
+    font-size: 15px;
+  }
+  .blogListContainer {
+    padding: 8%;
+  }
+  .blogImg {
+    height: auto;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1249px) {
+  .blogTitleContianer {
+    margin: 15% 0px 2%;
+  }
+  .blogImg {
+    height: auto;
+  }
+  .featuredBlogContianer {
+    height: 250px;
+  }
+}

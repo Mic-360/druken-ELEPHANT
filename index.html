@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Drunken ELEPHANT
+    </title>
+    <meta
+      name="facebook-domain-verification"
+      content="qcj2g7vccsbn729b7ba0npdbnywelo"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <!-- Google fonts CDN -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Source+Sans+Pro:300,400,600,700|Roboto:400,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+      crossorigin="anonymous"
+    />
+
+    <!--Font-awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!----- Style Sheet ----->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/swipebox.css" />
+  </head>
+
+  <body>
+
+    <header class="header">
+      <nav class="mainNav flex sans fwSemibold">
+        <span class="navLeft flex">
+          <a href="/" class="active menuNavLink sans fwSemibold">HOME</a>
+          <a href="/" class="menuNavLink sans fwSemibold"
+            >ABOUT US</a
+          >
+          <a href="menu.php" class="menuNavLink sans fwSemibold">MENU</a>
+          <a href="/" class="menuNavLink sans fwSemibold"
+            >LOCATION</a
+          >
+          <a href="gallery.php" class="menuNavLink sans fwSemibold">GALLERY</a>
+        </span>
+        <span class="navCenter flex">
+          <a href="/" class="menuNavLink sans fwSemibold">
+            <img
+              class="menuLogo"
+              alt="Drunken Monkey logo"
+              src="img/logo.png"
+            />
+          </a>
+        </span>
+        <span class="navRight flex">
+          <a href="news.php" class="menuNavLink sans fwSemibold">NEWS</a>
+          <a href="blogs.php" class="menuNavLink sans fwSemibold">BLOGS</a>
+          <a
+            href="partner-with-the-monkey.php"
+            class="menuNavLink sans fwSemibold"
+            >PARTNER WITH THE MONKEY</a
+          >
+          <a href="feed-me-back.php" class="menuNavLink sans fwSemibold"
+            >FEED ME BACK</a
+          >
+          <a href="fun-page.php" class="menuNavLink sans fwSemibold"
+            >FUN PAGE</a
+          >
+        </span>
+      </nav>
+
+      <div class="mobileNav flex sans fwSemibold" id="sideNav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <a href="/" class="mobileNavLogo sans fwSemibold">
+          <img class="menuLogo" alt="logo" src="img/logo.png" />
+        </a>
+        <a href="/" class="active menuNavLink sans fwSemibold">HOME</a>
+        <a href="/" class="menuNavLink sans fwSemibold">ABOUT US</a>
+        <a href="/" class="menuNavLink sans fwSemibold">MENU</a>
+        <a href="/" class="menuNavLink sans fwSemibold">LOCATION</a>
+        <a href="/" class="menuNavLink sans fwSemibold">GALLERY</a>
+        <a href="/" class="menuNavLink sans fwSemibold">NEWS</a>
+        <a href="/" class="menuNavLink sans fwSemibold">BLOGS</a>
+        <a
+          href="partner-with-the-monkey.php"
+          class="menuNavLink sans fwSemibold"
+          >PARTNER WITH THE MONKEY</a
+        >
+        <a href="feed-me-back.php" class="menuNavLink sans fwSemibold"
+          >FEED ME BACK</a
+        >
+        <a href="/" class="menuNavLink sans fwSemibold">FUN PAGE</a>
+      </div>
+      <span class="openNav" onclick="openNav()">&#9776;</span>
+      <a class="mobileLogo" href="/">
+        <img class="img-fluid" alt="logo" src="img/logo.png" />
+      </a>
+    </header>
+    <section class="homeTop flex">
+      <div class="homeTopContent fwLight">
+        <p class="homeTopText fwLight prota">NATURALLY HIGH.</p>
+        <p class="homeTopTag sans">When you’re flying, not falling.</p>
+      </div>
+      <div class="homeTopLineBox">
+        <span>.</span>
+      </div>
+    </section>
+
+    <section class="homeCloudsContainer">
+      <div class="homeCloudsLeft">
+        <img
+          class="img-fluid"
+          alt="fresh juice shop in chennai"
+          src="img/birds-left-1.png"
+        />
+      </div>
+      <div class="homeCloudsRight">
+        <img
+          class="img-fluid"
+          alt="fresh juice shop in bengaluru"
+          src="img/birds-right-1.png"
+        />
+      </div>
+    </section>
+    <section class="poolImgContainer">
+      <div class="poolImg">
+        <img
+          class="img-fluid"
+          alt="smoothie places near me"
+          src="img/home-naturally-high-banner.jpg"
+        />
+      </div>
+      <div class="bottleSnakeContainer">
+        <img
+          class="img-fluid snake"
+          alt="smoothie shops near me"
+          src="img/snake.png"
+        />
+      </div>
+      <div class="poolImgTxtBox">
+        <p class="poolImgTxt sans">You do stupid things when you're high.</p>
+        <p class="poolImgTxt">
+          You do epic things when you're
+          <span class="poolImgTxt2 prota">NATURALLY HIGH.</span>
+        </p>
+      </div>
+      <div class="dottedLines1"></div>
+    </section>
+
+    <section class="homeAboutContainer flex">
+      <div class="homeAboutTitleBox flex titleNameBox">
+        <div class="titleNameLine"></div>
+        <div class="homeAboutTitle titleName prota">
+          <h1>DRUNKEN ELEPHANT</h1>
+        </div>
+      </div>
+      <div class="homeAboutText">
+        <p class="homeAboutText1 sans fwLight">
+          Experience a concept inspired by EARTH.
+        </p>
+        <p class="homeAboutText2 sans">
+          The best of produce, locally grown, and full of everything good for
+          you. Experience a way of life. It’s about connecting with what is
+          real, what matters to you.
+        </p>
+      </div>
+    </section>
+
+    <section class="homeWolfContainer">
+      <img
+        alt="order smoothies near me"
+        class="img-fluid"
+        src="img/logo.png"
+      />
+      <div class="wolfCloudsLeft">
+        <img
+          alt="fresh juice shop in new delhi"
+          class="img-fluid"
+          src="img/home-top-cloud-1.png"
+        />
+      </div>
+      <div class="wolfCloudsRight">
+        <img
+          alt="shakes and juices near me"
+          class="img-fluid"
+          src="img/home-top-cloud-2.png"
+        />
+      </div>
+      <div class="snow"></div>
+      <div class="homeWolfContent">
+        <p class="prota fwLight">Wear your experience like an armour!</p>
+        <div class="homeSnowButton">
+          <a href="/" class="homeWolfButton">KNOW MORE?</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="homeProductsSection flex">
+      <div class="homeProductsLinecontainer">
+        <div class="homeProductsLine"></div>
+
+        <div class="homeProductsTitleBox">
+          <p class="sectionTitle fwLight prota">OUR PRODUCTS</p>
+          <p class="sectionContent sans fwLight">
+            So full of freshness, there’s no room for preservatives.
+          </p>
+        </div>
+      </div>
+
+      <section
+        class="functionalContainer menuCategoryContainer smoothie-bowl-container flex"
+      >
+        <a href="menu/smoothie-bowl.php" class="menuCategoryContent flex">
+          <div class="menuMascotBox">
+            <img
+              alt="smoothie shops in jalandar"
+              class="img-fluid"
+              src="img/logo.png"
+            />
+          </div>
+          <div class="menuCategoryText">
+            <p class="menuCategory fwLight sans">SMOOTHIE BOWLS</p>
+            <p class="menuCategoryTag fwLight sans">
+              Smoothies that are useful for the body <br />and keep it healthy
+            </p>
+          </div>
+          <div class="menuCategoryArrow">
+            <img
+              alt="smoothie shops in nellore"
+              class="img-fluid"
+              src="img/arrow-down.png"
+            />
+          </div>
+        </a>
+        <div class="menuCategoryImgBox">
+          <img
+            alt="smoothie bowl"
+            class="img-fluid"
+            src="img/bowl.png"
+          />
+        </div>
+      </section>
+
+      <section class="offTheTreeContainer menuCategoryContainer flex">
+        <div class="menuCategoryImgBox">
+          <img
+            alt="smoothie shops in vijayawada"
+            class="img-fluid"
+            src="img/logo.png"
+          />
+        </div>
+        <a href="menu/smoothies-by-fruits.php" class="menuCategoryContent flex">
+          <div class="menuCategoryArrow">
+            <img
+              alt="fresh juice shop in tirupathi"
+              class="img-fluid"
+              src="img/arrow-down-left.png"
+            />
+          </div>
+          <div class="menuMascotBox">
+            <img
+              alt="fresh juice shop in kakinada"
+              class="img-fluid"
+              src="img/logo.png"
+            />
+          </div>
+          <div class="menuCategoryText">
+            <p class="menuCategory fwLight sans">SMOOTHIE BY FRUITS</p>
+            <p class="menuCategoryTag fwLight sans">
+              Real goodness with a variety of fresh <br />fruits
+            </p>
+          </div>
+        </a>
+      </section>
+
+      <section class="functionalContainer menuCategoryContainer flex">
+        <a href="menu/functional.php" class="menuCategoryContent flex">
+          <div class="menuMascotBox">
+            <img
+              alt="smoothie shops in jalandar"
+              class="img-fluid"
+              src="img/logo.png"
+            />
+          </div>
+          <div class="menuCategoryText">
+            <p class="menuCategory fwLight sans">FUNCTIONAL</p>
+            <p class="menuCategoryTag fwLight sans">
+              Introducing monkeys new love - Smoothie Bowls.<br />
+              Enjoy the goodness of fruits and veggies in a bowl.
+            </p>
+          </div>
+          <div class="menuCategoryArrow">
+            <img
+              alt="smoothie shops in nellore"
+              class="img-fluid"
+              src="img/arrow-down.png"
+            />
+          </div>
+        </a>
+        <div class="menuCategoryImgBox">
+          <img
+            alt="fresh juice shop in guntur"
+            class="img-fluid"
+            src="img/logo.png"
+          />
+        </div>
+      </section>
+
+      <section class="pamperContainer menuCategoryContainer flex">
+        <div class="menuCategoryImgBox">
+          <img
+            alt="smoothie shops in guntur"
+            class="img-fluid"
+            src="img/logo.png"
+          />
+        </div>
+        <a href="menu/detox.php" class="menuCategoryContent flex">
+          <div class="menuCategoryArrow">
+            <img
+              alt="fresh juice shop in guwahati"
+              class="img-fluid"
+              src="img/arrow-down-left.png"
+            />
+          </div>
+          <div class="menuMascotBox">
+            <img
+              alt="fresh juice shop in vijayawada"
+              class="img-fluid"
+              src="img/logo.png"
+            />
+          </div>
+          <div class="menuCategoryText">
+            <p class="menuCategory fwLight sans">DETOX</p>
+            <p class="menuCategoryTag fwLight sans">
+              Smoothies that help you to protect and safeguard your machine
+              <br />by flushing out all those harmful toxins from the body
+            </p>
+          </div>
+        </a>
+      </section>
+
+      <section class="hotMenuContainer menuCategoryContainer flex">
+        <a href="menu/indulgence.php" class="menuCategoryContent flex">
+          <div class="menuMascotBox">
+            <img
+              alt="smoothie shops in guwahati"
+              class="img-fluid"
+              src="img/logo.png"
+            />
+          </div>
+          <div class="menuCategoryText">
+            <p class="menuCategory fwLight sans">INDULGENCE</p>
+            <p class="menuCategoryTag fwLight sans">
+              Loads of coffee, chocolate, nuts, cakes, <br />cookies, dairy and
+              crazy combinations
+            </p>
+          </div>
+          <div class="menuCategoryArrow">
+            <img
+              alt="smoothie shops in hyderabad"
+              class="img-fluid"
+              src="img/arrow-down.png"
+            />
+          </div>
+        </a>
+        <div class="menuCategoryImgBox">
+          <img
+            alt="smoothie shops in kolkata"
+            class="img-fluid"
+            src="img/logo.png"
+          />
+        </div>
+      </section>
+    </section>
+
+    <section class="homeLocationSearch">
+      <section class="locationsSearchContainer">
+        <div class="locationsSearchTitle prota fwLight">
+        </div>
+      </section>
+    </section>
+    <section class="homeFindMonkeyContainer">
+      <div class="locationMapContainer">
+        <div class="locationImgLayer">
+          <img
+            class="img-fluid locMap"
+            alt="shakes and juices near me"
+            src="img/location-map-sl-feb-2021.png"
+          />
+          <img
+            class="img-fluid locMapLg"
+            alt="smoothies near me"
+            src="img/location-map-feb-2021.png"
+          />
+        </div>
+        <div class="locationDotLayer">
+          <div class="locationDotBox" id="ahm">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">AHMEDABAD</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="bang">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">BANGALORE</p>
+              <p class="locTotalNumber">9 STORES</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="mysore">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">MYSORE</p>
+              <p class="locTotalNumber">9 STORES</p>
+            </div>
+          </div>
+
+          <div class="locationDotBox" id="hosur">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">HOSUR</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="mangalore">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">MANGALORE</p>
+              <p class="locTotalNumber">3 STORES</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="chen">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">CHENNAI</p>
+              <p class="locTotalNumber">19 STORES</p>
+            </div>
+          </div>
+
+          <div class="locationDotBox" id="thiruvannamalai">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">THIRUVANNAMALAI</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="kanchipuram">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">KANCHIPURAM</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="salem">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">SALEM</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="karur">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">KARUR</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+
+          <div class="locationDotBox" id="nagercoil">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">NAGERCOIL</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+
+          <div class="locationDotBox" id="pondy">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">PONDICHERRY</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="coimb">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">COIMBATORE</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="erode">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">ERODE</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+
+          <div class="locationDotBox" id="trichy">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">TRICHY</p>
+              <p class="locTotalNumber">2 STORES</p>
+            </div>
+          </div>
+
+          <div class="locationDotBox" id="thanjavur">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">Thanjavur</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+
+          <div class="locationDotBox" id="madurai">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">MADURAI</p>
+              <p class="locTotalNumber">2 STORES</p>
+            </div>
+          </div>
+
+          <div class="locationDotBox" id="guntur">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">GUNTUR</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="guwah">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">GUWAHATI</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="hyd">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">HYDERABAD</p>
+              <p class="locTotalNumber">16 STORES</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="warangal">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">WARANGAL</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="nizam">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">NIZAMBED</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+
+          <div class="locationDotBox" id="karimNagar">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">KARIM NAGAR</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="indore">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">INDORE</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="jabal">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">JABALPUR</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="noida">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">NOIDA</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="delhi">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">Delhi</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="punjab">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">Punjab</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="chattisgarh">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">Chattisgarh</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="calicut">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">Calicut</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="perintalmanna">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">Perintalmanna</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="pallakad">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">Pallakad</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="thissur">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">Thissur</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="thiruvella">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">Thiruvella</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="odisha">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">Odisha</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="surat">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">Surat</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="jaipur">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">Jaipur</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="kaki">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">KAKINADA</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="kochi">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">KOCHI</p>
+              <p class="locTotalNumber">2 STORES</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="trivandrum">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">TRIVANDRUM</p>
+              <p class="locTotalNumber">2 STORES</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="kolk">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">KOLKATA</p>
+              <p class="locTotalNumber">2 STORES</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="mumbai">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">MUMBAI</p>
+              <p class="locTotalNumber">2 STORES</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="nagpur">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">NAGPUR</p>
+              <p class="locTotalNumber">2 STORES</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="nellore">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">NELLORE</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="tirupathi">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">TIRUPATHI</p>
+              <p class="locTotalNumber">2 STORES</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="pune">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">PUNE</p>
+              <p class="locTotalNumber">3 STORES</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="rajmun">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">RAJMUNDRY</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="surat">
+            <div class="locInfoBox sans flex">
+              <p class="locName">SURAT</p>
+              <p class="locTotalNumber">2 STORES</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="vellore">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">VELLORE</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="vijay">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">VIJAYAWADA</p>
+              <p class="locTotalNumber">2 STORES</p>
+            </div>
+          </div>
+          <div class="locationDotBox" id="vizag">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">VIZAG</p>
+              <p class="locTotalNumber">3 STORES</p>
+            </div>
+          </div>
+
+          <div class="locationDotBox" id="kadapa">
+            <a class="locDot"> </a>
+            <div class="locInfoBox sans flex">
+              <p class="locName">KADAPA</p>
+              <p class="locTotalNumber">1 STORE</p>
+            </div>
+          </div>
+        </div>
+        <div class="totalStoreCountBox">
+          <p class="storeCount">130</p>
+          <p class="totalCountTagline">OUTLETS AROUND THE COUNTRY</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="materportContianer">
+      <img
+      style="padding-top: 50px;"
+        class="img-fluid"
+        alt="smoothie shops in kochi"
+        src="img/cafe.webp"
+      />
+    </section>
+
+    <section class="homeTakeAwayContainer">
+      <ul class="homeTakeAwayList flex">
+        <li>
+          <img
+            src="img/zomato.jpg"
+            class="img-fluid"
+            alt="fresh juice shop in vizhag"
+          />
+        </li>
+        <li>
+          <img
+            src="img/swiggy.jpg"
+            class="img-fluid"
+            alt="smoothie shops in rajmundry"
+          />
+        </li>
+      </ul>
+    </section>
+
+    <footer class="footer flex">
+      <div class="footerLogoBox">
+        <img
+          class="img-fluid"
+          alt="Drunken Monkey Logo"
+          src="img/logo.png"
+        />
+      </div>
+      <div class="footerContentWrapper flex">
+        <div class="footerNavWrapper flex">
+          <a class="footerNavLink grey79" href="about-us.php"
+            >KNOW THE ELEPHANT</a
+          >
+          <a class="footerNavLink grey79" href="menu.php">GET HIGH ON..</a>
+          <a class="footerNavLink grey79" href="location.php">FIND AN ELE</a>
+          <a class="footerNavLink grey79" href="gallery.php">GALLERY</a>
+          <a class="footerNavLink grey79" href="news.php">NEWS</a>
+          <a class="footerNavLink grey79" href="blogs.php">BLOG</a>
+          <a class="footerNavLink grey79" href="partner-with-the-monkey.php"
+            >FRANCHISE FORMS</a
+          >
+          <a class="footerNavLink grey79" href="feed-me-back.php">CONTACT US</a>
+        </div>
+        <div class="footerBottom flex">
+          <div class="copyright flex">
+            <p class="fwBold">&copy; DRUNKEN ELEPHANT 2022 |</p>
+            <a href="privacy-policies.php" class="grey79"> PRIVACY POLICY</a>
+          </div>
+
+          <div class="copyright footerAddress flex">
+            <p class="fwBold">Grey Elephant F&amp;B LLP</p>
+            <p>Some Really not so sus Corporate office,</p>
+            <p>sOME rEALLY aUTHENTIC  aDDRESS</p>
+          </div>
+          <div class="socialLinks">
+            <a
+              class="socialLinkBox"
+              target="_blank"
+              href="/"
+            >
+              <img
+                class="img-fluid"
+                alt="order smoothies near me"
+                src="img/facebook-logo%20(2).png"
+              />
+            </a>
+            <a
+              class="socialLinkBox"
+              target="_blank"
+              href="/"
+            >
+              <img
+                class="img-fluid"
+                alt="fresh juice shop in chennai"
+                src="img/instagram.png"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- bootstrap js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Scroll magic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+
+    <!--Greensock Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+
+    <!-- custom js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/CSSRulePlugin.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/snowfall.jquery.js"></script>
+    <script type="text/javascript" src="js/home-animations.js"></script>
+    <script src="js/location-search.js"></script>
+    <script src="js/location-animation.js"></script>
+    <script type="text/javascript" src="js/menu-animations.js"></script>
+  </body>
+</html>
