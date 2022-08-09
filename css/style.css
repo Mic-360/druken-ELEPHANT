@@ -114,14 +114,18 @@ a.whiteText:hover {
   margin: 0px 15px;
 }
 .menuLogo {
-  padding-top: 15px;
+  height: 80px;
+  width: 100%;
   max-width: 180px;
   transition: all 0.3s ease 0s;
 }
+
 .menuLogo.shrink {
   max-width: 130px;
   transition: all 0.3s ease 0s;
 }
+
+
 .mobileNav {
   height: 100%;
   width: 0px;
@@ -178,7 +182,8 @@ a.whiteText:hover {
   align-self: flex-start;
 }
 .mobileLogo img {
-  max-width: 150px;
+  padding-top: 20px;
+  max-width: 100px;
   transition: all 0.4s ease 0s;
 }
 @media only screen and (min-width: 1536px) {
