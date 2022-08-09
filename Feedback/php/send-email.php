@@ -1,6 +1,6 @@
 <?php
 
-$to = 'Replace this with your own email address@gmail.com';
+$to = 'mailto:dwivedysaisuman@gmail.com';
 
 function url(){
   return sprintf(
